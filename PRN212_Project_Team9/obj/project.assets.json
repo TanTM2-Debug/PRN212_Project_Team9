@@ -4441,11 +4441,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
+      "projectUniqueName": "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
       "projectName": "PRN212_Project_Team9",
-      "projectPath": "D:\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
+      "projectPath": "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
       "packagesPath": "C:\\Users\\msi\\.nuget\\packages\\",
-      "outputPath": "D:\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9\\obj\\",
+      "outputPath": "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\msi\\AppData\\Roaming\\NuGet\\NuGet.Config",

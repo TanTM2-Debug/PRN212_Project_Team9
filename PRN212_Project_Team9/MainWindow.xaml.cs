@@ -1,4 +1,5 @@
-﻿using PRN212_Project_Team9.Models;
+﻿
+using PRN212_Project_Team9.Models;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,11 +18,14 @@ namespace PRN212_Project_Team9
     /// </summary>
     public partial class MainWindow : Window
     {
-        SalesManagementDbContext context = new SalesManagementDbContext();
+        Prn212ProjectSalesManagementDbContext _Context = new Prn212ProjectSalesManagementDbContext();
         public MainWindow()
         {
             InitializeComponent();
-            dgv.ItemsSource = context.Products.ToList();
+
+            dgv.ItemsSource = _Context.Products.ToList();
         }
+
+
     }
 }

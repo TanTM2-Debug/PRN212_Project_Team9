@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e55ya2lyY4k=",
+  "dgSpecHash": "LPeAzcAGKfE=",
   "success": true,
-  "projectFilePath": "D:\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
+  "projectFilePath": "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\msi\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\msi\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

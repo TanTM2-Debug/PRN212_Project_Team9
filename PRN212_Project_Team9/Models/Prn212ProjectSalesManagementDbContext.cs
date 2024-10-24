@@ -6,13 +6,13 @@ using Microsoft.Extensions.Configuration;
 
 namespace PRN212_Project_Team9.Models;
 
-public partial class SalesManagementDbContext : DbContext
+public partial class Prn212ProjectSalesManagementDbContext : DbContext
 {
-    public SalesManagementDbContext()
+    public Prn212ProjectSalesManagementDbContext()
     {
     }
 
-    public SalesManagementDbContext(DbContextOptions<SalesManagementDbContext> options)
+    public Prn212ProjectSalesManagementDbContext(DbContextOptions<Prn212ProjectSalesManagementDbContext> options)
         : base(options)
     {
     }
@@ -44,14 +44,17 @@ public partial class SalesManagementDbContext : DbContext
         optionsBuilder.UseSqlServer(strConn);
 
     }
+
+
+
     //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-    //        => optionsBuilder.UseSqlServer("Server=(local);uid=sa;pwd=admin;database=SalesManagementDB; TrustServerCertificate=True");
+    //        => optionsBuilder.UseSqlServer("Server=(local);uid=sa;pwd=admin;database=PRN212_Project_SalesManagementDB; TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Categori__19093A2B105FC692");
+            entity.HasKey(e => e.CategoryId).HasName("PK__Categori__19093A2BD7D24BEC");
 
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
             entity.Property(e => e.CategoryName).HasMaxLength(100);
@@ -59,7 +62,7 @@ public partial class SalesManagementDbContext : DbContext
 
         modelBuilder.Entity<Customer>(entity =>
         {
-            entity.HasKey(e => e.CustomerId).HasName("PK__Customer__A4AE64B837C5E9D6");
+            entity.HasKey(e => e.CustomerId).HasName("PK__Customer__A4AE64B8097C9BAB");
 
             entity.Property(e => e.CustomerId).HasColumnName("CustomerID");
             entity.Property(e => e.Address).HasMaxLength(200);
@@ -71,7 +74,7 @@ public partial class SalesManagementDbContext : DbContext
 
         modelBuilder.Entity<Employee>(entity =>
         {
-            entity.HasKey(e => e.EmployeeId).HasName("PK__Employee__7AD04FF1648A9817");
+            entity.HasKey(e => e.EmployeeId).HasName("PK__Employee__7AD04FF17F21DA33");
 
             entity.Property(e => e.EmployeeId).HasColumnName("EmployeeID");
             entity.Property(e => e.Email).HasMaxLength(100);
@@ -83,7 +86,7 @@ public partial class SalesManagementDbContext : DbContext
 
         modelBuilder.Entity<Inventory>(entity =>
         {
-            entity.HasKey(e => e.InventoryId).HasName("PK__Inventor__F5FDE6D31DFA41EC");
+            entity.HasKey(e => e.InventoryId).HasName("PK__Inventor__F5FDE6D3217FDADF");
 
             entity.ToTable("Inventory");
 
@@ -98,7 +101,7 @@ public partial class SalesManagementDbContext : DbContext
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.OrderId).HasName("PK__Orders__C3905BAFB1CBEC77");
+            entity.HasKey(e => e.OrderId).HasName("PK__Orders__C3905BAF88BA7F78");
 
             entity.Property(e => e.OrderId).HasColumnName("OrderID");
             entity.Property(e => e.CustomerId).HasColumnName("CustomerID");
@@ -117,7 +120,7 @@ public partial class SalesManagementDbContext : DbContext
 
         modelBuilder.Entity<OrderDetail>(entity =>
         {
-            entity.HasKey(e => e.OrderDetailId).HasName("PK__OrderDet__D3B9D30C6DB16299");
+            entity.HasKey(e => e.OrderDetailId).HasName("PK__OrderDet__D3B9D30C7DD93BB4");
 
             entity.Property(e => e.OrderDetailId).HasColumnName("OrderDetailID");
             entity.Property(e => e.OrderId).HasColumnName("OrderID");
@@ -138,7 +141,7 @@ public partial class SalesManagementDbContext : DbContext
 
         modelBuilder.Entity<Payment>(entity =>
         {
-            entity.HasKey(e => e.PaymentId).HasName("PK__Payments__9B556A58F8B8F933");
+            entity.HasKey(e => e.PaymentId).HasName("PK__Payments__9B556A58230B992A");
 
             entity.Property(e => e.PaymentId).HasColumnName("PaymentID");
             entity.Property(e => e.AmountPaid).HasColumnType("decimal(18, 2)");
@@ -153,7 +156,7 @@ public partial class SalesManagementDbContext : DbContext
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6ED305C589E");
+            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6ED822B948F");
 
             entity.Property(e => e.ProductId).HasColumnName("ProductID");
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
