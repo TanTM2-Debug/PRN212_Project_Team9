@@ -18,12 +18,11 @@ namespace PRN212_Project_Team9
     /// </summary>
     public partial class MainWindow : Window
     {
-        Prn212ProjectSalesManagementDbContext _Context = new Prn212ProjectSalesManagementDbContext();
+        SalesManagementDbContext _context = new SalesManagementDbContext();
         public MainWindow()
         {
             InitializeComponent();
-
-            dgv.ItemsSource = _Context.Products.ToList();
+            dgv.ItemsSource = _context.Products.ToList();
         }
 
 

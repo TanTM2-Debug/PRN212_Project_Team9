@@ -280,3 +280,4 @@ D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj
 D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\PRN212_P.9047E884.Up2Date
 D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\PRN212_Project_Team9.genruntimeconfig.cache
 D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\ref\PRN212_Project_Team9.dll
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\bin\Debug\net8.0-windows\appsettings.json
