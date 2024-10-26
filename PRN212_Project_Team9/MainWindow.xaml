@@ -5,9 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PRN212_Project_Team9"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <DataGrid x:Name="dgv" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-
+        Title="MainWindow" Height="250" Width="300">
+    <Grid Background="Aqua">
+        <Button Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="100" Click="Button_Click" Margin="106,155,0,0"/>
+        <Label Content="Position" HorizontalAlignment="Left" Margin="54,197,0,0" VerticalAlignment="Top" Background="Chocolate" Width="90"/>
+        <ComboBox x:Name="posi" HorizontalAlignment="Left" Margin="158,199,0,0" VerticalAlignment="Top" Width="97" Height="25"/>
+        <Label Content="Account" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top" Background="Chocolate" Width="93"/>
+        <TextBox x:Name="acc" HorizontalAlignment="Left" Margin="117,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Height="26"/>
+        <Label Content="Pass" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Background="Chocolate" Width="93"/>
+        <PasswordBox x:Name="pass" HorizontalAlignment="Left" Margin="117,67,0,0" VerticalAlignment="Top" Width="173" Height="26"/>
     </Grid>
 </Window>

@@ -11,6 +11,10 @@ public partial class Customer
 
     public string? PhoneNumber { get; set; }
 
+    public string? Account { get; set; }
+
+    public string? Password { get; set; }
+
     public DateTime? CreatedDate { get; set; }
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();

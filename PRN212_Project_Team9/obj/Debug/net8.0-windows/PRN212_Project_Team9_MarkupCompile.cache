@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\App.xaml
-11407045341
+4-1622816037
 
-141502843654
+18-360064722
 244899708841
-MainWindow.xaml;
+Admin.xaml;Customer.xaml;Employees.xaml;MainWindow.xaml;
 
 False
 
