@@ -30,57 +30,29 @@ namespace PRN212_Project_Team9
 
         private void LoadData()
         {
-            List<string> data = new List<string>()
-            {
-                "Employee", "Customer"
-            };
 
-            posi.ItemsSource = data;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (posi.Text.Equals("Employee"))
-            {
-                var data = _con.Employees.FirstOrDefault(x => x.Account.Equals(acc.Text) && x.Password.Equals(pass.Password));
 
-                if (data != null && data.PositionId == 1)
-                {
-                    MemoryApp.Id = data.EmployeeId;
-                    Admin adminWindow = new Admin();
-                    adminWindow.Show();
-                }
-                else if(data != null && data.PositionId == 2)
-                {
-                    MemoryApp.Id = data.EmployeeId;
-                    Employees employeeWindow = new Employees();
-                    employeeWindow.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Ko có tài khoản");
-                }
+            var data = _con.Employees.FirstOrDefault(x => x.Account.Equals(acc.Text) && x.Password.Equals(pass.Password));
+
+            if (data != null && data.PositionId == 1)
+            {
+                Admin adminWindow = new Admin();
+                adminWindow.Show();
             }
-            else if (posi.Text.Equals("Customer"))
+            else if (data != null && data.PositionId == 2)
             {
-                var data = _con.Customers.FirstOrDefault(x => x.Account.Equals(acc.Text) && x.Password.Equals(pass.Password));
-
-                if (data != null)
-                {
-                    MemoryApp.Id = data.CustomerId;
-                    Customer customerWindow = new Customer();
-                    customerWindow.Show();
-                    
-                }
-                else
-                {
-                    MessageBox.Show("Ko có tài khoản");
-                }
+                Employees employeeWindow = new Employees();
+                employeeWindow.Show();
             }
             else
             {
-                MessageBox.Show("Chưa chọn vị trí");
+                MessageBox.Show("Ko có tài khoản");
             }
+
         }
     }
 }

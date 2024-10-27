@@ -1,4 +1,4 @@
-﻿using PRN212_Project_Team9.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +20,6 @@ namespace PRN212_Project_Team9
     /// </summary>
     public partial class Customer : Window
     {
-        SalesManagementDbContext _con = new SalesManagementDbContext();
         public Customer()
         {
             InitializeComponent();
