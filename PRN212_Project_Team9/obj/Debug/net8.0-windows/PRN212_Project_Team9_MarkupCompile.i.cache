@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\
+E:\Fall24\Project PRN\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\
 PRN212_Project_Team9
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\App.xaml
-4-1622816037
+E:\Fall24\Project PRN\PRN212_Project_Team9\PRN212_Project_Team9\App.xaml
+5358462553
 
-251257324485
-244899708841
-Admin.xaml;Customer.xaml;Employees.xaml;MainWindow.xaml;
+26-1306718934
+244737496710
+Admin.xaml;Customer.xaml;Employees.xaml;MainWindow.xaml;ProductManage.xaml;
 
-False
+True
 
