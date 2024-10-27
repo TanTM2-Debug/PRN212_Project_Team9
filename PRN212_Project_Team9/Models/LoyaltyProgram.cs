@@ -7,7 +7,7 @@ public partial class LoyaltyProgram
 {
     public int ProgramId { get; set; }
 
-    public string? ProgramName { get; set; }
+    public string ProgramName { get; set; } = null!;
 
     public decimal? PointMultiplier { get; set; }
 

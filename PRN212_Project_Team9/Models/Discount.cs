@@ -7,7 +7,7 @@ public partial class Discount
 {
     public int DiscountId { get; set; }
 
-    public string? DiscountName { get; set; }
+    public string DiscountName { get; set; } = null!;
 
     public decimal? DiscountPercentage { get; set; }
 
