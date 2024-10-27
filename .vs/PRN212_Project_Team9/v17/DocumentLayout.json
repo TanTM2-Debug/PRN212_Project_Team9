@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\productmanage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\productmanage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\productmanage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\productmanage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\productmanage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\productmanage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -41,8 +41,7 @@
               "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml",
               "RelativeToolTip": "PRN212_Project_Team9\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-27T14:38:09.024Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T14:38:09.024Z"
             },
             {
               "$type": "Document",
@@ -54,18 +53,17 @@
               "RelativeToolTip": "PRN212_Project_Team9\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-27T14:09:12.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T14:09:12.63Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ProductManage.xaml.cs",
               "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\ProductManage.xaml.cs",
               "RelativeDocumentMoniker": "PRN212_Project_Team9\\ProductManage.xaml.cs",
               "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\ProductManage.xaml.cs",
               "RelativeToolTip": "PRN212_Project_Team9\\ProductManage.xaml.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAApwDcAAAANAAAA",
+              "ViewState": "AQIAAC8BAAAAAAAAAAAuwD4BAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-27T14:07:49.984Z",
               "EditorCaption": ""
@@ -84,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ProductManage.xaml",
               "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\ProductManage.xaml",
               "RelativeDocumentMoniker": "PRN212_Project_Team9\\ProductManage.xaml",
