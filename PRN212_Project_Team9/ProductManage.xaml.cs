@@ -38,10 +38,18 @@ namespace PRN212_Project_Team9
                 ProductName = x.ProductName,
                 Category = x.Category.CategoryName,
                 Price = x.Price,
-                StockQuantity = x.StockQuantity,
+                Quantity = db.Inventories.Where(c => c.ProductId == x.ProductId).Select(c => c.Quantity).FirstOrDefault() != null ? db.Inventories.Where(c => c.ProductId == x.ProductId).Select(c => c.Quantity).FirstOrDefault() : 0,
                 Description = x.Description,
             }).ToList();
             lvProduct.ItemsSource = listProduct;
+
+            lvProduct.SelectedItem = null;
+            txtProductID.Text = "";
+            txtProductName.Text = "";
+            cbCategory.SelectedIndex = 0;
+            txtPrice.Text = "";
+            txtQuantity.Text = "";
+            txtDescription.Text = "";
         }
 
         public void LoadLvCategory()
@@ -52,6 +60,10 @@ namespace PRN212_Project_Team9
                 CategoryName = x.CategoryName,
             }).ToList();
             lvCategory.ItemsSource = listCategory;
+
+            lvCategory.SelectedItem = null;
+            txtCategoryId.Text = "";
+            txtCategoryName.Text = "";
         }
 
         public void LoadCbCategory()
@@ -70,21 +82,14 @@ namespace PRN212_Project_Team9
                 txtProductName.Text = selectedProduct.ProductName;
                 cbCategory.Text = selectedProduct.Category;
                 txtPrice.Text = selectedProduct.Price.ToString();
-                txtStockQuantity.Text = selectedProduct.StockQuantity.ToString();
+                txtQuantity.Text = selectedProduct.Quantity.ToString();
                 txtDescription.Text = selectedProduct.Description;
             }
         }
 
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
-            lvProduct.SelectedItem = null;
-            txtProductID.Text = "";
-            txtProductName.Text = "";
-            cbCategory.SelectedIndex = 0;
-            txtPrice.Text = "";
-            txtStockQuantity.Text = "";
-            txtDescription.Text = "";
-
+            LoadLvProduct();
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -101,9 +106,9 @@ namespace PRN212_Project_Team9
                 return;
             }
 
-            if (String.IsNullOrEmpty(txtStockQuantity.Text))
+            if (String.IsNullOrEmpty(txtQuantity.Text))
             {
-                MessageBox.Show("Please Enter Stock Quantity!");
+                MessageBox.Show("Please Enter Quantity!");
                 return;
             }
 
@@ -112,12 +117,20 @@ namespace PRN212_Project_Team9
                 ProductName = txtProductName.Text,
                 Category = db.Categories.FirstOrDefault(x => x.CategoryName == cbCategory.Text),
                 Price = decimal.Parse(txtPrice.Text),
-                StockQuantity = int.Parse(txtStockQuantity.Text),
                 Description = txtDescription.Text,
             };
+
+
             try
             {
                 db.Products.Add(product);
+                db.SaveChanges();
+                Inventory inven = new Inventory()
+                {
+                    ProductId = product.ProductId,
+                    Quantity = int.Parse(txtQuantity.Text),
+                };
+                db.Inventories.Add(inven);
                 db.SaveChanges();
                 MessageBox.Show("Add Product Success!");
                 LoadLvProduct();
@@ -149,28 +162,31 @@ namespace PRN212_Project_Team9
                 return;
             }
 
-            if (String.IsNullOrEmpty(txtStockQuantity.Text))
+            if (String.IsNullOrEmpty(txtQuantity.Text))
             {
-                MessageBox.Show("Please Enter Stock Quantity!");
+                MessageBox.Show("Please Enter Quantity!");
                 return;
             }
 
             Product selectedProduct = db.Products.FirstOrDefault(x => x.ProductId == int.Parse(txtProductID.Text));
 
-            if (selectedProduct != null)
+            if (selectedProduct == null)
             {
-                MessageBox.Show("Not Found!");
+                MessageBox.Show($"Not Found ProductID = {txtProductID.Text}");
                 return;
             }
 
             selectedProduct.ProductName = txtProductName.Text;
             selectedProduct.Category = db.Categories.FirstOrDefault(x => x.CategoryName == cbCategory.Text);
             selectedProduct.Price = decimal.Parse(txtPrice.Text);
-            selectedProduct.StockQuantity = int.Parse(txtStockQuantity.Text);
             selectedProduct.Description = txtDescription.Text;
+
+            Inventory inventory = db.Inventories.FirstOrDefault(x => x.ProductId == selectedProduct.ProductId);
+            inventory.Quantity = int.Parse(txtQuantity.Text);
             try
             {
                 db.Update(selectedProduct);
+                db.Update(inventory);
                 db.SaveChanges();
                 MessageBox.Show("Update Product Success!");
                 LoadLvProduct();
@@ -194,7 +210,7 @@ namespace PRN212_Project_Team9
             }
 
             Product product = db.Products.FirstOrDefault(x => x.ProductId == int.Parse(txtProductID.Text));
-
+            Inventory inventory = db.Inventories.FirstOrDefault(x => x.ProductId == product.ProductId);
             if (product == null)
             {
                 MessageBox.Show("Not Found Product!");
@@ -207,6 +223,7 @@ namespace PRN212_Project_Team9
             {
                 try
                 {
+                    db.Remove(inventory);
                     db.Remove(product);
                     db.SaveChanges();
                     MessageBox.Show("Delete Success!");
@@ -223,21 +240,18 @@ namespace PRN212_Project_Team9
         private void lvCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectedCategory = lvCategory.SelectedItem as dynamic;
-            if (selectedCategory == null)
+            if (selectedCategory != null)
             {
-                MessageBox.Show("Not Found Category!");
-                return;
+                txtCategoryId.Text = selectedCategory.CategoryID.ToString();
+                txtCategoryName.Text = selectedCategory.CategoryName;
             }
 
-            txtCategoryId.Text = selectedCategory.CategoryID.ToString();
-            txtCategoryName.Text = selectedCategory.CategoryName;
+           
         }
 
         private void btnRefreshCategory_Click(object sender, RoutedEventArgs e)
         {
-            lvCategory.SelectedItem = null;
-            txtCategoryId.Text = "";
-            txtCategoryName.Text = "";
+            LoadLvCategory();
         }
 
         private void btnAddCategory_Click(object sender, RoutedEventArgs e)
@@ -259,6 +273,8 @@ namespace PRN212_Project_Team9
                 db.Add(category);
                 db.SaveChanges();
                 MessageBox.Show("Add Category Success!");
+                LoadLvCategory();
+                LoadCbCategory();
             }
             catch (Exception ex)
             {
@@ -294,6 +310,9 @@ namespace PRN212_Project_Team9
                 db.Update(category);
                 db.SaveChanges();
                 MessageBox.Show("Update Category Success!");
+                LoadLvCategory();
+                LoadCbCategory();
+                LoadLvProduct();
             }
             catch (Exception ex)
             {
@@ -321,6 +340,8 @@ namespace PRN212_Project_Team9
                 db.Remove(category);
                 db.SaveChanges();
                 MessageBox.Show("Delete Category Success!");
+                LoadLvCategory();
+                LoadCbCategory();
             }
             catch (Exception ex)
             {

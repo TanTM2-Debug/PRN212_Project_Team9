@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PRN212_Project_Team9"
         mc:Ignorable="d"
-        Title="Product Manage" Height="900" Width="1700" WindowStartupLocation="CenterScreen" FontSize="20">
+        Title="Product Manage" Height="800" Width="1550" WindowStartupLocation="CenterScreen" FontSize="20">
     <Grid Margin="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
@@ -22,7 +22,7 @@
             <TextBlock FontSize="32" FontWeight="DemiBold" VerticalAlignment="Center" Background="Gray" Width="280" Padding="10">Product Manage</TextBlock>
             <WrapPanel Margin="5">
                 <TextBox x:Name="txtSearch" Width="400" Margin="50,0,0,0"/>
-                <Button  Width="100" Height="40" Margin="10,0,0,0" >Search</Button>
+                <Button  Width="100" Height="30" Margin="10,0,0,0" >Search</Button>
             </WrapPanel>
         </WrapPanel>
         <WrapPanel Grid.Row="0" Grid.Column="2" Margin="5" VerticalAlignment="Center" Background="YellowGreen">
@@ -30,55 +30,55 @@
             <TextBox x:Name="txtUser" BorderThickness="0" FontSize="27" Background="Transparent"/>
         </WrapPanel>
 
-        <Border Grid.Column="2" Grid.Row="1" BorderThickness="2" BorderBrush="Gray" CornerRadius="5" Padding="10" Margin="20,20,20,20" Width="465">
+        <Border Grid.Column="2" Grid.Row="1" BorderThickness="2" BorderBrush="Gray" CornerRadius="5" Padding="10" Margin="5" Width="465">
             <StackPanel>
 
-                <WrapPanel Margin="10">
+                <WrapPanel Margin="5">
                     <TextBlock Width="160" >Product ID</TextBlock>
                     <TextBox x:Name="txtProductID" Width="160" BorderThickness="0" IsEnabled="False" FontSize="22"/>
                 </WrapPanel>
 
 
-                <StackPanel Margin="10">
+                <StackPanel Margin="5">
                     <TextBlock>Product Name</TextBlock>
                     <TextBox x:Name="txtProductName" Width="420" HorizontalAlignment="Left" BorderThickness="2"/>
                 </StackPanel>
 
 
-                <StackPanel Margin="10">
+                <StackPanel Margin="5">
                     <TextBlock>Category</TextBlock>
                     <ComboBox x:Name="cbCategory" Width="420" HorizontalAlignment="Left" BorderThickness="2" Height="33"/>
                 </StackPanel>
 
                 <WrapPanel>
-                    <StackPanel Margin="20,10,60,10">
+                    <StackPanel Margin="20,5,60,10">
                         <TextBlock>Price</TextBlock>
                         <TextBox x:Name="txtPrice" Width="160" BorderThickness="2"/>
                     </StackPanel>
 
 
-                    <StackPanel Margin="10">
-                        <TextBlock>Stock Quantity</TextBlock>
-                        <TextBox x:Name="txtStockQuantity" Width="160" BorderThickness="2"/>
+                    <StackPanel Margin="5">
+                        <TextBlock>Quantity</TextBlock>
+                        <TextBox x:Name="txtQuantity" Width="160" BorderThickness="2"/>
                     </StackPanel>
                 </WrapPanel>
 
-                <StackPanel HorizontalAlignment="Left" Margin="10">
+                <StackPanel HorizontalAlignment="Left" Margin="5">
                     <TextBlock>Description</TextBlock>
                     <TextBox x:Name="txtDescription" Width="420" Height="80" BorderThickness="2" TextWrapping="Wrap"/>
                 </StackPanel>
 
 
                 <WrapPanel>
-                    <Button x:Name="btnRefresh" Width="90" Height="40" Margin="10" Click="btnRefresh_Click">REFRESH</Button>
-                    <Button x:Name="btnAdd" Width="90" Height="40" Margin="10" Click="btnAdd_Click">ADD</Button>
-                    <Button x:Name="btnUpdate" Width="90" Height="40" Margin="10" Click="btnUpdate_Click">UPDATE</Button>
-                    <Button x:Name="btnDelete" Width="90" Height="40" Margin="10" Click="btnDelete_Click">DELETE</Button>
+                    <Button x:Name="btnRefresh" Width="90" Height="30" Margin="10" Click="btnRefresh_Click">REFRESH</Button>
+                    <Button x:Name="btnAdd" Width="90" Height="30" Margin="10" Click="btnAdd_Click">ADD</Button>
+                    <Button x:Name="btnUpdate" Width="90" Height="30" Margin="10" Click="btnUpdate_Click">UPDATE</Button>
+                    <Button x:Name="btnDelete" Width="90" Height="30" Margin="10" Click="btnDelete_Click">DELETE</Button>
                 </WrapPanel>
             </StackPanel>
         </Border>
 
-        <Border Grid.Column="2" Grid.Row="2" BorderThickness="2" BorderBrush="Gray" CornerRadius="5" Padding="10" Margin="20,20,20,20" Width="465">
+        <Border Grid.Column="2" Grid.Row="2" BorderThickness="2" BorderBrush="Gray" CornerRadius="5" Padding="10" Margin="10" HorizontalAlignment="Center">
             <StackPanel>
                 <TextBox x:Name="txtCategoryId" Visibility="Collapsed"/>
                 <TextBlock FontSize="25" FontWeight="DemiBold" Margin="0,0,0,15">Category</TextBlock>
@@ -110,7 +110,7 @@
                     <GridViewColumn Header="Product Name" Width="220" DisplayMemberBinding="{Binding Path=ProductName}"/>
                     <GridViewColumn Header="Category" Width="160" DisplayMemberBinding="{Binding Path=Category}"/>
                     <GridViewColumn Header="Price" Width="90" DisplayMemberBinding="{Binding Path=Price}"/>
-                    <GridViewColumn Header="Stock Quantity" Width="160" DisplayMemberBinding="{Binding Path=StockQuantity}"/>
+                    <GridViewColumn Header="Quantity" Width="auto" DisplayMemberBinding="{Binding Path=Quantity}"/>
                     <GridViewColumn Header="Description" Width="auto" DisplayMemberBinding="{Binding Path=Description}"/>
                 </GridView>
             </ListView.View>
