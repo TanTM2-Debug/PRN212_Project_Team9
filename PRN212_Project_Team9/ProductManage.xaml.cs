@@ -50,6 +50,7 @@ namespace PRN212_Project_Team9
             txtPrice.Text = "";
             txtQuantity.Text = "";
             txtDescription.Text = "";
+            txtImport.Text = "";
         }
 
         public void LoadLvCategory()
@@ -64,6 +65,7 @@ namespace PRN212_Project_Team9
             lvCategory.SelectedItem = null;
             txtCategoryId.Text = "";
             txtCategoryName.Text = "";
+           
         }
 
         public void LoadCbCategory()
@@ -100,11 +102,17 @@ namespace PRN212_Project_Team9
                 return;
             }
 
-            if (String.IsNullOrEmpty(txtPrice.Text))
+            decimal price;
+            try
             {
-                MessageBox.Show("Please Enter Price!");
+                price = decimal.Parse(txtPrice.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Invalid Price!");
                 return;
             }
+            
 
             if (String.IsNullOrEmpty(txtQuantity.Text))
             {
@@ -116,7 +124,7 @@ namespace PRN212_Project_Team9
             {
                 ProductName = txtProductName.Text,
                 Category = db.Categories.FirstOrDefault(x => x.CategoryName == cbCategory.Text),
-                Price = decimal.Parse(txtPrice.Text),
+                Price = price,
                 Description = txtDescription.Text,
             };
 
@@ -156,9 +164,14 @@ namespace PRN212_Project_Team9
                 return;
             }
 
-            if (String.IsNullOrEmpty(txtPrice.Text))
+            decimal price;
+            try
             {
-                MessageBox.Show("Please Enter Price!");
+                price = decimal.Parse(txtPrice.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Invalid Price!");
                 return;
             }
 
@@ -178,7 +191,7 @@ namespace PRN212_Project_Team9
 
             selectedProduct.ProductName = txtProductName.Text;
             selectedProduct.Category = db.Categories.FirstOrDefault(x => x.CategoryName == cbCategory.Text);
-            selectedProduct.Price = decimal.Parse(txtPrice.Text);
+            selectedProduct.Price = price;
             selectedProduct.Description = txtDescription.Text;
 
             Inventory inventory = db.Inventories.FirstOrDefault(x => x.ProductId == selectedProduct.ProductId);
@@ -346,6 +359,99 @@ namespace PRN212_Project_Team9
             catch (Exception ex)
             {
                 MessageBox.Show($"Error Delete Category {ex.Message}");
+            }
+        }
+
+        private void btnImport_Click(object sender, RoutedEventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtImport.Text))
+            {
+                MessageBox.Show("Please Enter Import Value!");
+                return;
+            }
+
+            Product product;
+            try
+            {
+                product = db.Products.FirstOrDefault(x => x.ProductId == int.Parse(txtProductID.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Not Found Product to Import!");
+                return;
+            }
+
+            Inventory inventory = db.Inventories.FirstOrDefault(x => x.ProductId == product.ProductId);
+            DateTime now = DateTime.Now;
+            inventory.LastUpdate = now;
+            try
+            {
+                inventory.Quantity += int.Parse(txtImport.Text);
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Invalid Import Value!");
+                return;
+            }
+           
+
+            try
+            {
+                db.Update(inventory);
+                db.SaveChanges();
+                MessageBox.Show($"Import {txtImport.Text} {product.ProductName} Success!");
+                LoadLvProduct();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error Import Product Quantity {ex.Message}");
+            }
+            
+
+        }
+
+        private void btnExport_Click(object sender, RoutedEventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtImport.Text))
+            {
+                MessageBox.Show("Please Enter Import Value!");
+                return;
+            }
+
+            Product product;
+            try
+            {
+                product = db.Products.FirstOrDefault(x => x.ProductId == int.Parse(txtProductID.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Not Found Product to Import!");
+                return;
+            }
+
+            Inventory inventory = db.Inventories.FirstOrDefault(x => x.ProductId == product.ProductId);
+            DateTime now = DateTime.Now;
+            inventory.LastUpdate = now;
+            try
+            {
+                inventory.Quantity -= int.Parse(txtImport.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Invalid Import Value!");
+                return;
+            }
+
+
+            try
+            {
+                db.Update(inventory);
+                db.SaveChanges();
+                MessageBox.Show($"Export {txtImport.Text} {product.ProductName} Success!");
+                LoadLvProduct();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error Export Product Quantity {ex.Message}");
             }
         }
     }

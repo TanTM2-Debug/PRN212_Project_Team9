@@ -18,6 +18,7 @@
             <ColumnDefinition Width="520"/>
         </Grid.ColumnDefinitions>
 
+
         <WrapPanel Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="30,0,0,0" Width="871">
             <TextBlock FontSize="32" FontWeight="DemiBold" VerticalAlignment="Center" Background="Gray" Width="280" Padding="10">Product Manage</TextBlock>
             <WrapPanel Margin="5">
@@ -51,16 +52,25 @@
                 </StackPanel>
 
                 <WrapPanel>
-                    <StackPanel Margin="20,5,60,10">
+                    <StackPanel Margin="5,5,30,5">
                         <TextBlock>Price</TextBlock>
-                        <TextBox x:Name="txtPrice" Width="160" BorderThickness="2"/>
+                        <TextBox x:Name="txtPrice" Width="100" BorderThickness="2"/>
                     </StackPanel>
 
-
-                    <StackPanel Margin="5">
+                    <StackPanel Margin="0,5,30,5">
                         <TextBlock>Quantity</TextBlock>
-                        <TextBox x:Name="txtQuantity" Width="160" BorderThickness="2"/>
+                        <TextBox x:Name="txtQuantity" Width="100" BorderThickness="2" IsEnabled="False"/>
                     </StackPanel>
+
+                    <StackPanel Margin="0,5,0,5">
+                        <TextBlock>Import/Export</TextBlock>
+                        <WrapPanel>
+                            <TextBox x:Name="txtImport" Width="80" BorderThickness="2"/>
+                            <Button x:Name="btnImport" Width="25" Height="30" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="btnImport_Click" Margin="5,0,5,0">+</Button>
+                            <Button x:Name="btnExport" Width="25" Height="30" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="btnExport_Click">-</Button>
+                        </WrapPanel>
+                    </StackPanel>
+                    
                 </WrapPanel>
 
                 <StackPanel HorizontalAlignment="Left" Margin="5">
@@ -106,15 +116,16 @@
         <ListView x:Name="lvProduct" Grid.Column="1" Grid.Row="1" Margin="5" SelectionChanged="lvProduct_SelectionChanged">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="ID" Width="30" DisplayMemberBinding="{Binding Path=ProductID}"/>
-                    <GridViewColumn Header="Product Name" Width="220" DisplayMemberBinding="{Binding Path=ProductName}"/>
-                    <GridViewColumn Header="Category" Width="160" DisplayMemberBinding="{Binding Path=Category}"/>
+                    <GridViewColumn Header="ID" Width="auto" DisplayMemberBinding="{Binding Path=ProductID}"/>
+                    <GridViewColumn Header="Product Name" Width="auto" DisplayMemberBinding="{Binding Path=ProductName}"/>
+                    <GridViewColumn Header="Category" Width="auto" DisplayMemberBinding="{Binding Path=Category}"/>
                     <GridViewColumn Header="Price" Width="90" DisplayMemberBinding="{Binding Path=Price}"/>
                     <GridViewColumn Header="Quantity" Width="auto" DisplayMemberBinding="{Binding Path=Quantity}"/>
                     <GridViewColumn Header="Description" Width="auto" DisplayMemberBinding="{Binding Path=Description}"/>
                 </GridView>
             </ListView.View>
         </ListView>
+
 
 
 
