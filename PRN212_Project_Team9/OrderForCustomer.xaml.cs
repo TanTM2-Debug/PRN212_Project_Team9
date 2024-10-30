@@ -89,7 +89,9 @@ namespace PRN212_Project_Team9
             }
         }
 
-
-
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
