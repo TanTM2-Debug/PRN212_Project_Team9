@@ -45,6 +45,7 @@ namespace PRN212_Project_Team9
             }
             else if (data != null && data.PositionId == 2)
             {
+                AppMemory.Id = data.EmployeeId;
                 Employees employeeWindow = new Employees();
                 employeeWindow.Show();
             }

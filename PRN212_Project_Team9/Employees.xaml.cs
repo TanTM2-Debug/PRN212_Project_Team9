@@ -27,5 +27,11 @@ namespace PRN212_Project_Team9
 
 
         }
+
+        private void OrderForCustomerButton_Click(object sender, RoutedEventArgs e)
+        {
+            OrderForCustomer orderForCustomer = new OrderForCustomer();
+            orderForCustomer.Show();
+        }
     }
 }

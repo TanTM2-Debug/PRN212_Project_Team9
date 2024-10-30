@@ -6,5 +6,7 @@
         xmlns:local="clr-namespace:PRN212_Project_Team9"
         mc:Ignorable="d"
         Title="Employees" Height="450" Width="800">
-    <Grid/>
+    <Grid>
+        <Button x:Name="OrderForCustomerButton" Content="Order For Customer" HorizontalAlignment="Left" Margin="622,352,0,0" VerticalAlignment="Top" Height="45" Width="137" Click="OrderForCustomerButton_Click"/>
+    </Grid>
 </Window>
