@@ -5,12 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PRN212_Project_Team9"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="300">
-    <Grid Background="Aqua">
-        <Button Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="100" Click="Button_Click" Margin="106,155,0,0"/>
-        <Label Content="Account" HorizontalAlignment="Left" Margin="10,23,0,0" VerticalAlignment="Top" Background="Chocolate" Width="93"/>
-        <TextBox x:Name="acc" HorizontalAlignment="Left" Margin="117,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="173" Height="26"/>
-        <Label Content="Pass" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Background="Chocolate" Width="93"/>
-        <PasswordBox x:Name="pass" HorizontalAlignment="Left" Margin="117,67,0,0" VerticalAlignment="Top" Width="173" Height="26"/>
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="600" Width="1100">
+    <Grid Background="#FFFF">
+        <Image HorizontalAlignment="Left" Height="500" VerticalAlignment="Center" Width="500" Margin="-3,0,0,0" Stretch="Fill" Source="/Image/Login.jpg"/>
+        <TextBlock x:Name="Name2"  TextWrapping="Wrap" Text="Shop Store" Height="100" Width="300" FontSize="60" Foreground="#FF1B1B1B" FontFamily="STCaiyun" LineHeight="18" Margin="0,132,150,0" TextAlignment="Center" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <Label Content="Account" HorizontalAlignment="Left" Margin="550,231,0,0" VerticalAlignment="Top" Width="142"  FontFamily="STCaiyun" Foreground="#FF151515" FontSize="20"/>
+        <TextBox x:Name="acc" HorizontalAlignment="Left" Margin="550,0,0,0" TextWrapping="Wrap" VerticalContentAlignment="Center" VerticalAlignment="Center" Width="500" Height="50" Background="#FFEACCCC" FontSize="20"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="550,322,0,0" VerticalAlignment="Top" Width="142"  FontFamily="STCaiyun" Foreground="#FF151515" FontSize="20" />
+        <PasswordBox x:Name="pass" HorizontalAlignment="Left" Margin="550,358,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="500" Height="50" Background="#FFEACCCC" FontSize="20"/>
+        <Button Content="Login" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="100" Click="Button_Click" Margin="750,445,0,0"/>
     </Grid>
 </Window>

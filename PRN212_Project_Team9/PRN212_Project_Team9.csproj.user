@@ -10,10 +10,28 @@
     <Compile Update="Admin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ChartReport\CharCustomer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChartReport\ChartEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Customer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="CustomerPoint.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Employees.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="LoyaltyPrograms.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ReportAll\ReportEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ReportAll\ReportCustomer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -21,13 +39,31 @@
     <Page Update="Admin.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="ChartReport\CharCustomer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChartReport\ChartEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Customer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomerPoint.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Employees.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="LoyaltyPrograms.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReportAll\ReportEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReportAll\ReportCustomer.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
