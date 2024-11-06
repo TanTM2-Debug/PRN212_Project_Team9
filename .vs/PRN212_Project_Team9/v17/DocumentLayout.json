@@ -1,25 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\admin\\Documents\\1. MON HOC\\8. PRN\\Ass-Nhom9-2\\PRN212_Project_Team9\\",
+  "WorkspaceRootPath": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|c:\\users\\admin\\documents\\1. mon hoc\\8. prn\\ass-nhom9-2\\prn212_project_team9\\prn212_project_team9\\employees.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\productmanage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\productmanage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\employees.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\employees.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|c:\\users\\admin\\documents\\1. mon hoc\\8. prn\\ass-nhom9-2\\prn212_project_team9\\prn212_project_team9\\customerpoint.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\customerpoint.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\customerpoint.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|c:\\users\\admin\\documents\\1. mon hoc\\8. prn\\ass-nhom9-2\\prn212_project_team9\\prn212_project_team9\\employees.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\employees.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\employees.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|c:\\users\\admin\\documents\\1. mon hoc\\8. prn\\ass-nhom9-2\\prn212_project_team9\\prn212_project_team9\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|c:\\users\\admin\\documents\\1. mon hoc\\8. prn\\ass-nhom9-2\\prn212_project_team9\\prn212_project_team9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -30,73 +34,77 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CustomerPoint.xaml",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\1. MON HOC\\8. PRN\\Ass-Nhom9-2\\PRN212_Project_Team9\\PRN212_Project_Team9\\CustomerPoint.xaml",
-              "RelativeDocumentMoniker": "PRN212_Project_Team9\\CustomerPoint.xaml",
-              "ToolTip": "C:\\Users\\admin\\Documents\\1. MON HOC\\8. PRN\\Ass-Nhom9-2\\PRN212_Project_Team9\\PRN212_Project_Team9\\CustomerPoint.xaml",
-              "RelativeToolTip": "PRN212_Project_Team9\\CustomerPoint.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-06T05:43:17.322Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Employees.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\1. MON HOC\\8. PRN\\Ass-Nhom9-2\\PRN212_Project_Team9\\PRN212_Project_Team9\\Employees.xaml.cs",
-              "RelativeDocumentMoniker": "PRN212_Project_Team9\\Employees.xaml.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\1. MON HOC\\8. PRN\\Ass-Nhom9-2\\PRN212_Project_Team9\\PRN212_Project_Team9\\Employees.xaml.cs",
-              "RelativeToolTip": "PRN212_Project_Team9\\Employees.xaml.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAowGcAAAA4AAAA",
+              "Title": "ProductManage.xaml.cs",
+              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\ProductManage.xaml.cs",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\ProductManage.xaml.cs",
+              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\ProductManage.xaml.cs",
+              "RelativeToolTip": "PRN212_Project_Team9\\ProductManage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T05:41:18.822Z",
+              "WhenOpened": "2024-11-06T16:55:11.374Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Employees.xaml",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\1. MON HOC\\8. PRN\\Ass-Nhom9-2\\PRN212_Project_Team9\\PRN212_Project_Team9\\Employees.xaml",
-              "RelativeDocumentMoniker": "PRN212_Project_Team9\\Employees.xaml",
-              "ToolTip": "C:\\Users\\admin\\Documents\\1. MON HOC\\8. PRN\\Ass-Nhom9-2\\PRN212_Project_Team9\\PRN212_Project_Team9\\Employees.xaml",
-              "RelativeToolTip": "PRN212_Project_Team9\\Employees.xaml",
+              "Title": "CustomerPoint.xaml",
+              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\CustomerPoint.xaml",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\CustomerPoint.xaml",
+              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\CustomerPoint.xaml",
+              "RelativeToolTip": "PRN212_Project_Team9\\CustomerPoint.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-06T05:41:15.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T05:43:17.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Employees.xaml.cs",
+              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\Employees.xaml.cs",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\Employees.xaml.cs",
+              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\Employees.xaml.cs",
+              "RelativeToolTip": "PRN212_Project_Team9\\Employees.xaml.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAowGcAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T05:41:18.822Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\1. MON HOC\\8. PRN\\Ass-Nhom9-2\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "PRN212_Project_Team9\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\1. MON HOC\\8. PRN\\Ass-Nhom9-2\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml.cs",
-              "RelativeToolTip": "PRN212_Project_Team9\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAC0AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T03:49:23.427Z",
-              "EditorCaption": ""
+              "Title": "Employees.xaml",
+              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\Employees.xaml",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\Employees.xaml",
+              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\Employees.xaml",
+              "RelativeToolTip": "PRN212_Project_Team9\\Employees.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-06T05:41:15.851Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\MainWindow.xaml.cs",
+              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml.cs",
+              "RelativeToolTip": "PRN212_Project_Team9\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAC0AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T03:49:23.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\1. MON HOC\\8. PRN\\Ass-Nhom9-2\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml",
+              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml",
               "RelativeDocumentMoniker": "PRN212_Project_Team9\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\admin\\Documents\\1. MON HOC\\8. PRN\\Ass-Nhom9-2\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml",
+              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml",
               "RelativeToolTip": "PRN212_Project_Team9\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-06T03:49:12.065Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T03:49:12.065Z"
             }
           ]
         }

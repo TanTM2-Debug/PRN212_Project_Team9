@@ -4836,19 +4836,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "C:\\Users\\ptrung\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Documents\\1. MON HOC\\8. PRN\\Ass-Nhom9-2\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
+      "projectUniqueName": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
       "projectName": "PRN212_Project_Team9",
-      "projectPath": "C:\\Users\\admin\\Documents\\1. MON HOC\\8. PRN\\Ass-Nhom9-2\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Documents\\1. MON HOC\\8. PRN\\Ass-Nhom9-2\\PRN212_Project_Team9\\PRN212_Project_Team9\\obj\\",
+      "projectPath": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
+      "packagesPath": "C:\\Users\\ptrung\\.nuget\\packages\\",
+      "outputPath": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ptrung\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4856,7 +4856,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4926,7 +4925,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
