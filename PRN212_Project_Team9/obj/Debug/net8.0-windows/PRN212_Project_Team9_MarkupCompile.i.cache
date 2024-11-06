@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\
+D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\
 PRN212_Project_Team9
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\App.xaml
-5395501204
+D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\App.xaml
+11-66029912
 
-27464930344
-244899708841
-Admin.xaml;Customer.xaml;Employees.xaml;MainWindow.xaml;OrderForCustomer.xaml;
+33-1346638694
+2541912735690
+Admin\Admin.xaml;Admin\Customer.xaml;Admin\CustomerPoint.xaml;Admin\Employees.xaml;Admin\LoyaltyPrograms.xaml;ChartReport\CharCustomer.xaml;ChartReport\ChartEmployee.xaml;MainWindow.xaml;OrderForCustomer.xaml;ReportAll\ReportCustomer.xaml;ReportAll\ReportEmployee.xaml;
 
-True
+False
 

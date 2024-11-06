@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj": {}
+    "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj": {}
   },
   "projects": {
-    "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj": {
+    "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
+        "projectUniqueName": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
         "projectName": "PRN212_Project_Team9",
-        "projectPath": "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
-        "packagesPath": "C:\\Users\\msi\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\obj\\",
+        "projectPath": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\msi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -46,6 +46,10 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.104.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -59,6 +63,14 @@
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[8.0.1, )"
+            },
+            "OxyPlot.Core": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "OxyPlot.Wpf": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             }
           },
           "imports": [
@@ -80,7 +92,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

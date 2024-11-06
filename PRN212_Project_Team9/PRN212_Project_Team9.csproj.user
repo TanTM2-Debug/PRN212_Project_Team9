@@ -7,33 +7,69 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Admin.xaml.cs">
+    <Compile Update="Admin\Admin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Customer.xaml.cs">
+    <Compile Update="ChartReport\CharCustomer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Employees.xaml.cs">
+    <Compile Update="ChartReport\ChartEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Admin\Customer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Admin\CustomerPoint.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Admin\Employees.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Admin\LoyaltyPrograms.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="OrderForCustomer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ReportAll\ReportCustomer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ReportAll\ReportEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Admin.xaml">
+    <Page Update="Admin\Admin.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Customer.xaml">
+    <Page Update="ChartReport\CharCustomer.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Employees.xaml">
+    <Page Update="ChartReport\ChartEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Admin\Customer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Admin\CustomerPoint.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Admin\Employees.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Admin\LoyaltyPrograms.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="OrderForCustomer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReportAll\ReportCustomer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReportAll\ReportEmployee.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
