@@ -31,14 +31,36 @@ namespace PRN212_Project_Team9
 
         private void LoadData()
         {
-            DataProductListToOrder.ItemsSource = _con.Products.Include(x => x.ProductDiscounts).Select(x => new
+            DateTime currentTime = DateTime.Now;
+
+            DataProductListToOrder.ItemsSource = _con.Products.Select(x => new
             {
                 x.ProductId,
                 x.ProductName,
                 x.CategoryId,
-                PriceCurrent = x.Price ,
+                x.Price,
+                x.StockQuantity,
+            }).ToList();
 
-            });
+        }
+
+        private void DataProductListToOrder_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var productSelect = DataProductListToOrder.SelectedItems;
+
+            if (productSelect != null)
+            {
+                DiscountsOfProduct.ItemsSource = _con.ProductDiscounts.Where(x => x.ProductId == productSelect.).ToList();
+
+
+
+
+
+
+
+            }
+
+
         }
     }
 }

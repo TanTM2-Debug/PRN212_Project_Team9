@@ -289,3 +289,5 @@ D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj
 D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\Employees.baml
 D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\OrderForCustomer.g.cs
 D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\OrderForCustomer.baml
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\ProductSelect.g.cs
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\ProductSelect.baml
