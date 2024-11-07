@@ -21,14 +21,26 @@ namespace PRN212_Project_Team9
     /// </summary>
     public partial class OrderForCustomer : Window
     {
+
+
         SalesManagementDbContext _con = new SalesManagementDbContext();
+
         public OrderForCustomer()
         {
             InitializeComponent();
-
-
             LoadData();
         }
+
+
+        private void ProductSelect_ProductSelected(string productData)
+        {
+            tbxIdProduct.Text = AppMemory.IdProduct.ToString();
+            tbxNameProduct.Text = AppMemory.NameProduct.ToString();
+            tbxTotalPrice.Text = AppMemory.TotalPrice.ToString();
+            tbxQuantityProduct.Text = AppMemory.QuantityProduct.ToString();
+        }
+
+
 
         private void LoadData()
         {
@@ -91,7 +103,18 @@ namespace PRN212_Project_Team9
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            
+
+            // Tạo instance của ProductSelect
+            ProductSelect productSelect = new ProductSelect();
+
+            // Đăng ký Event để nhận dữ liệu khi sản phẩm được chọn
+            productSelect.ProductSelected += ProductSelect_ProductSelected;
+            productSelect.ShowDialog();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            LoadData();
         }
     }
 }

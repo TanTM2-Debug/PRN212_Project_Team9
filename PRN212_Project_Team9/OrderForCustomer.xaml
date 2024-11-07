@@ -18,7 +18,8 @@
         </ListView>
         <Label Background="BlueViolet" Content="ListCustomerInSystem" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="36" Width="276" FontSize="18" FontWeight="Bold"/>
         <Label Content="Search:" HorizontalAlignment="Left" Margin="10,272,0,0" VerticalAlignment="Top" Background="Gray" Width="54"/>
-        <ComboBox x:Name="TypeSearch" HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top" Width="118" Height="26"/>
+        <ComboBox x:Name="TypeSearch" HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top" Width="118" Height="26">
+        </ComboBox>
         <TextBox x:Name="InputSearch" HorizontalAlignment="Left" Margin="69,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" Height="26"/>
         <Button Content="Start" HorizontalAlignment="Left" Margin="138,303,0,0" VerticalAlignment="Top" Height="26" Width="148" Click="Button_Click"/>
         <TextBox HorizontalAlignment="Left" Margin="446,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
@@ -30,17 +31,24 @@
         <DataGrid x:Name="OrderDetail" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="621,59,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="465" Width="369"/>
         <Label Background="BlueViolet" Content="ListOrderDetailCustomer" HorizontalAlignment="Left" Margin="621,10,0,0" VerticalAlignment="Top" Height="36" Width="369" FontSize="18" FontWeight="Bold"/>
         <Button Content="SelectProduct" HorizontalAlignment="Left" Margin="328,180,0,0" VerticalAlignment="Top" Height="27" Width="264" Click="Button_Click_1"/>
-        <Label Content="ProductId" HorizontalAlignment="Left" Margin="329,221,0,0" VerticalAlignment="Top" Background="Aqua" Width="95"/>
-        <Label Content="ProducName" HorizontalAlignment="Left" Margin="328,259,0,0" VerticalAlignment="Top" Background="Aqua" Width="95"/>
-        <TextBox HorizontalAlignment="Left" Margin="447,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
-        <TextBox HorizontalAlignment="Left" Margin="446,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
 
 
         <Button Content="AddOrder" HorizontalAlignment="Left" Margin="333,457,0,0" VerticalAlignment="Top" Height="27" Width="262"/>
         <Button Content="DeleteOrder" HorizontalAlignment="Left" Margin="333,497,0,0" VerticalAlignment="Top" Height="27" Width="262"/>
         <ComboBox Margin="169,455,684,52"/>
-        
-        
-        
+        <Button Content="Refresh" HorizontalAlignment="Left" Margin="10,334,0,0" VerticalAlignment="Top" Height="26" Width="276" Click="Button_Click_2"/>
+
+
+        <Label Content="ProductId" HorizontalAlignment="Left" Margin="329,221,0,0" VerticalAlignment="Top" Background="Aqua" Width="95"/>
+        <Label Content="ProducName" HorizontalAlignment="Left" Margin="328,259,0,0" VerticalAlignment="Top" Background="Aqua" Width="95"/>
+        <Label Content="TotalPrice" HorizontalAlignment="Left" Margin="328,298,0,0" VerticalAlignment="Top" Background="Aqua" Width="95"/>
+        <Label Content="QuantityProduct" HorizontalAlignment="Left" Margin="328,334,0,0" VerticalAlignment="Top" Background="Aqua" Width="95"/>
+        <TextBox x:Name="tbxIdProduct" HorizontalAlignment="Left" Margin="447,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
+        <TextBox x:Name="tbxNameProduct" HorizontalAlignment="Left" Margin="446,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
+        <TextBox x:Name="tbxTotalPrice" HorizontalAlignment="Left" Margin="446,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
+        <TextBox x:Name="tbxQuantityProduct" HorizontalAlignment="Left" Margin="446,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
+
+
+
     </Grid>
 </Window>
