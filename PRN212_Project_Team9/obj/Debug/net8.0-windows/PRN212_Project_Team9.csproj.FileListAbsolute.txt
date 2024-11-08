@@ -461,3 +461,9 @@ D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0
 D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\Admin\CustomerPoint.baml
 D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\Admin\Employees.baml
 D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\Admin\LoyaltyPrograms.baml
+D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\HomeScreen\EditProfile.g.cs
+D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\HomeScreen\ProfileEmployee.g.cs
+D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\HomeScreen\TaskEmployee.g.cs
+D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\HomeScreen\EditProfile.baml
+D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\HomeScreen\ProfileEmployee.baml
+D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\HomeScreen\TaskEmployee.baml

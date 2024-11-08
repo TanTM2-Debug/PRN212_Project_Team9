@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|d:\\projectprn\\demogit\\prn212_project_team9\\prn212_project_team9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|d:\\projectprn\\demogit\\prn212_project_team9\\prn212_project_team9\\homescreen\\profileemployee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\homescreen\\profileemployee.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|d:\\projectprn\\demogit\\prn212_project_team9\\prn212_project_team9\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|d:\\projectprn\\demogit\\prn212_project_team9\\prn212_project_team9\\homescreen\\profileemployee.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\homescreen\\profileemployee.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|d:\\projectprn\\demogit\\prn212_project_team9\\prn212_project_team9\\homescreen\\editprofile.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\homescreen\\editprofile.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|d:\\projectprn\\demogit\\prn212_project_team9\\prn212_project_team9\\homescreen\\editprofile.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\homescreen\\editprofile.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,26 +34,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "PRN212_Project_Team9\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml.cs",
-              "RelativeToolTip": "PRN212_Project_Team9\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAuwCgAAAANAAAA",
+              "DocumentIndex": 2,
+              "Title": "EditProfile.xaml.cs",
+              "DocumentMoniker": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\HomeScreen\\EditProfile.xaml.cs",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\HomeScreen\\EditProfile.xaml.cs",
+              "ToolTip": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\HomeScreen\\EditProfile.xaml.cs",
+              "RelativeToolTip": "PRN212_Project_Team9\\HomeScreen\\EditProfile.xaml.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAgwGQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T10:39:17.191Z"
+              "WhenOpened": "2024-11-08T12:09:27.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProfileEmployee.xaml.cs",
+              "DocumentMoniker": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\HomeScreen\\ProfileEmployee.xaml.cs",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\HomeScreen\\ProfileEmployee.xaml.cs",
+              "ToolTip": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\HomeScreen\\ProfileEmployee.xaml.cs",
+              "RelativeToolTip": "PRN212_Project_Team9\\HomeScreen\\ProfileEmployee.xaml.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAQwEgAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T11:53:21.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EditProfile.xaml",
+              "DocumentMoniker": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\HomeScreen\\EditProfile.xaml",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\HomeScreen\\EditProfile.xaml",
+              "ToolTip": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\HomeScreen\\EditProfile.xaml",
+              "RelativeToolTip": "PRN212_Project_Team9\\HomeScreen\\EditProfile.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-08T11:52:49.008Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "PRN212_Project_Team9\\MainWindow.xaml",
-              "ToolTip": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml",
-              "RelativeToolTip": "PRN212_Project_Team9\\MainWindow.xaml",
+              "Title": "ProfileEmployee.xaml",
+              "DocumentMoniker": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\HomeScreen\\ProfileEmployee.xaml",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\HomeScreen\\ProfileEmployee.xaml",
+              "ToolTip": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\HomeScreen\\ProfileEmployee.xaml",
+              "RelativeToolTip": "PRN212_Project_Team9\\HomeScreen\\ProfileEmployee.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-06T10:38:47.715Z",
+              "WhenOpened": "2024-11-08T11:51:50.496Z",
               "EditorCaption": ""
             }
           ]

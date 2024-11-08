@@ -28,13 +28,22 @@
     <Compile Update="Admin\LoyaltyPrograms.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="HomeScreen\EditProfile.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="OrderForCustomer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HomeScreen\ProfileEmployee.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ReportAll\ReportCustomer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ReportAll\ReportEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HomeScreen\TaskEmployee.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -60,16 +69,25 @@
     <Page Update="Admin\LoyaltyPrograms.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="HomeScreen\EditProfile.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="OrderForCustomer.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="HomeScreen\ProfileEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="ReportAll\ReportCustomer.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ReportAll\ReportEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HomeScreen\TaskEmployee.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

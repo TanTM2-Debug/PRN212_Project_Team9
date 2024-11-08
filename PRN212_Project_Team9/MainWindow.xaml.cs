@@ -43,8 +43,8 @@ namespace PRN212_Project_Team9
             {
                 MessageBox.Show("Login successful, Employee!");
                 AppMemory.Id = data.EmployeeId;
-                Employees employeeWindow = new Employees(); // Sửa thành login truyền vào cửa sổ Order
-                employeeWindow.Show();
+                TaskEmployee employeeTask = new TaskEmployee();
+                employeeTask.Show();
                 this.Close();
             }
             else

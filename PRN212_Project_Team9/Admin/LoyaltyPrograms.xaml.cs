@@ -41,8 +41,8 @@ namespace PRN212_Project_Team9
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
-            Admin admin = new();
-            admin.Show();
+            TaskEmployee taskEmployee = new TaskEmployee();
+            taskEmployee.Show();
             this.Close();
         }
 

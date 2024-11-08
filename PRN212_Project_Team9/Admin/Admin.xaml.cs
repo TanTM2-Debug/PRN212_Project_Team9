@@ -40,13 +40,6 @@ namespace PRN212_Project_Team9
             this.Close();
         }
 
-        private void btnCustomer_Click(object sender, RoutedEventArgs e)
-        {
-            Customer customer = new Customer();
-            customer.Show();
-            this.Close();
-        }
-
         private void btnDashBoard_Click(object sender, RoutedEventArgs e)
         {
             Admin admin = new Admin();
