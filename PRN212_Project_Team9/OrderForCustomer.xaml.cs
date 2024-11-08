@@ -48,6 +48,11 @@ namespace PRN212_Project_Team9
             List<string> stringType = new List<string>()
             {    "Id" , "Name" , "Phone"    };
 
+            List<string> stringDateOrder = new List<string>()
+            {
+
+            };
+
             TypeSearch.ItemsSource = stringType.ToList();
             ListCustomer.ItemsSource = _con.Customers.Select(x => new
             {
@@ -115,6 +120,12 @@ namespace PRN212_Project_Team9
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             LoadData();
+        }
+
+        private void OrderSelected_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+
         }
     }
 }
