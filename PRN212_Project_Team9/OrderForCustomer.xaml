@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="OrderForCustomer" Height="550" Width="1000">
     <Grid Background="Salmon">
-        <ListView x:Name="ListCustomer" Margin="10,51,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="216" Width="276">
+        <ListView x:Name="ListCustomer" Margin="10,51,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="216" Width="276" SelectionChanged="ListCustomer_SelectionChanged">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Id" Width="50" DisplayMemberBinding="{Binding Path=CustomerId}"/>
@@ -22,13 +22,13 @@
         </ComboBox>
         <TextBox x:Name="InputSearch" HorizontalAlignment="Left" Margin="69,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" Height="26"/>
         <Button Content="Start" HorizontalAlignment="Left" Margin="138,303,0,0" VerticalAlignment="Top" Height="26" Width="148" Click="Button_Click"/>
-        <TextBox HorizontalAlignment="Left" Margin="446,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
+        <TextBox x:Name="tbxIdCustomer" HorizontalAlignment="Left" Margin="446,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
         <Label Content="IdCustomer" HorizontalAlignment="Left" Margin="330,51,0,0" VerticalAlignment="Top" Background="Aqua" Width="93"/>
         <Label Content="NameCustomer" HorizontalAlignment="Left" Margin="330,92,0,0" VerticalAlignment="Top" Background="Aqua"/>
         <Label Content="PhoneCustomer" HorizontalAlignment="Left" Margin="328,133,0,0" VerticalAlignment="Top" Background="Aqua"/>
-        <TextBox HorizontalAlignment="Left" Margin="446,92,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
-        <TextBox HorizontalAlignment="Left" Margin="446,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
-        <DataGrid x:Name="OrderDetail" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="621,59,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="465" Width="369"/>
+        <TextBox x:Name="tbxNameCustomer" HorizontalAlignment="Left" Margin="446,92,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
+        <TextBox x:Name="tbxPhoneCustomer" HorizontalAlignment="Left" Margin="446,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
+        <DataGrid x:Name="OrderDetail" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="621,59,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="465" Width="369" SelectionChanged="OrderDetail_SelectionChanged"/>
         <Label Background="BlueViolet" Content="ListOrderDetailCustomer" HorizontalAlignment="Left" Margin="621,10,0,0" VerticalAlignment="Top" Height="36" Width="369" FontSize="18" FontWeight="Bold"/>
         <Button Content="SelectProduct" HorizontalAlignment="Left" Margin="328,180,0,0" VerticalAlignment="Top" Height="27" Width="264" Click="Button_Click_1"/>
         <Button Content="Refresh" HorizontalAlignment="Left" Margin="10,334,0,0" VerticalAlignment="Top" Height="26" Width="276" Click="Button_Click_2"/>

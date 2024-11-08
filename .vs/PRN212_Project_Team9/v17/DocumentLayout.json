@@ -17,8 +17,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 300,
-          "SelectedChildIndex": 16,
+          "DockedWidth": 297,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -83,20 +83,13 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrderForCustomer.xaml.cs",
-              "DocumentMoniker": "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\OrderForCustomer.xaml.cs",
-              "RelativeDocumentMoniker": "PRN212_Project_Team9\\OrderForCustomer.xaml.cs",
-              "ToolTip": "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\OrderForCustomer.xaml.cs",
-              "RelativeToolTip": "PRN212_Project_Team9\\OrderForCustomer.xaml.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAIwCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T03:51:06.319Z",
-              "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 303,
+          "SelectedChildIndex": 0,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -106,7 +99,26 @@
               "ToolTip": "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\OrderForCustomer.xaml",
               "RelativeToolTip": "PRN212_Project_Team9\\OrderForCustomer.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-08T03:37:32.279Z",
+              "WhenOpened": "2024-11-08T08:50:50.011Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 303,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderForCustomer.xaml.cs",
+              "DocumentMoniker": "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\OrderForCustomer.xaml.cs",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\OrderForCustomer.xaml.cs",
+              "ToolTip": "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\OrderForCustomer.xaml.cs",
+              "RelativeToolTip": "PRN212_Project_Team9\\OrderForCustomer.xaml.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAgwIIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T09:06:14.271Z",
               "EditorCaption": ""
             }
           ]

@@ -48,10 +48,6 @@ namespace PRN212_Project_Team9
             List<string> stringType = new List<string>()
             {    "Id" , "Name" , "Phone"    };
 
-            List<string> stringDateOrder = new List<string>()
-            {
-
-            };
 
             TypeSearch.ItemsSource = stringType.ToList();
             ListCustomer.ItemsSource = _con.Customers.Select(x => new
@@ -108,15 +104,10 @@ namespace PRN212_Project_Team9
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
-            // Tạo instance của ProductSelect
             ProductSelect productSelect = new ProductSelect();
-
-            // Đăng ký Event để nhận dữ liệu khi sản phẩm được chọn
             productSelect.ProductSelected += ProductSelect_ProductSelected;
             productSelect.ShowDialog();
         }
-
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             LoadData();
@@ -125,6 +116,42 @@ namespace PRN212_Project_Team9
         private void OrderSelected_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+            DateTime? selectedDateTime = OrderSelected.Items[OrderSelected.SelectedIndex] as DateTime?;
+
+            DateTime dateTime = DateTime.Now;
+
+            if (selectedDateTime != null)
+            {
+                Order? myOrder = _con.Orders.FirstOrDefault(x => x.OrderDate == selectedDateTime && x.CustomerId == Int32.Parse(tbxIdCustomer.Text));
+
+                if (myOrder != null)
+                {
+                    OrderDetail.ItemsSource = _con.OrderDetails.Where(x => x.OrderId == myOrder.OrderId).ToList();
+                }
+
+
+                
+            }
+        }
+
+
+        private void ListCustomer_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            dynamic customerSelect = ListCustomer.SelectedItem as dynamic;
+            if (customerSelect != null)
+            {
+                tbxIdCustomer.Text = customerSelect.CustomerId.ToString();
+                tbxNameCustomer.Text = customerSelect.CustomerName;
+                tbxPhoneCustomer.Text = customerSelect.PhoneNumber;
+
+                List<DateTime?> TimeOrder = new List<DateTime?>() { DateTime.Now };
+                TimeOrder.AddRange(_con.Orders.Where(x => x.CustomerId == Int32.Parse(tbxIdCustomer.Text)).OrderByDescending(x => x.OrderDate).Select(x => x.OrderDate).ToList());
+                OrderSelected.ItemsSource = TimeOrder.ToList();
+            }
+        }
+
+        private void OrderDetail_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
     }
