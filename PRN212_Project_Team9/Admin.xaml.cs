@@ -134,8 +134,11 @@ namespace PRN212_Project_Team9
             RevenueChart.InvalidatePlot(true); // Làm mới biểu đồ
         }
 
-
-
-
+        private void btnProduct_Click(object sender, RoutedEventArgs e)
+        {
+            ProductManage pm = new ProductManage();
+            pm.Show();
+            this.Close();
+        }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PRN212_Project_Team9"
         mc:Ignorable="d"
-        Title="Product Manage" Height="800" Width="1550" WindowStartupLocation="CenterScreen" FontSize="20">
+        Title="Product Manage" Height="770" Width="1500" WindowStartupLocation="CenterScreen" FontSize="20">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -23,7 +23,7 @@
             <TextBlock FontSize="32" FontWeight="DemiBold" VerticalAlignment="Center" Background="Gray" Width="280" Padding="10">Product Manage</TextBlock>
             <WrapPanel Margin="5">
                 <TextBox x:Name="txtSearch" Width="400" Margin="50,0,0,0"/>
-                <Button  Width="100" Height="30" Margin="10,0,0,0" >Search</Button>
+                <Button x:Name="btnSearch" Width="100" Height="30" Margin="10,0,0,0" Click="btnSearch_Click">Search</Button>
             </WrapPanel>
         </WrapPanel>
         <WrapPanel Grid.Row="0" Grid.Column="2" Margin="5" VerticalAlignment="Center" Background="YellowGreen">

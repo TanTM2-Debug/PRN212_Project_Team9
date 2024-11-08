@@ -22,6 +22,7 @@ namespace PRN212_Project_Team9
     public partial class ProductManage : Window
     {
         SalesManagementDbContext db = new SalesManagementDbContext();
+
         public ProductManage()
         {
             InitializeComponent();
@@ -30,429 +31,392 @@ namespace PRN212_Project_Team9
             LoadLvCategory();
         }
 
-        public void LoadLvProduct()
+        // Phương thức chung để lấy product theo ID
+        private async Task<Product> GetProductById(int productId) =>
+            await db.Products.FirstOrDefaultAsync(x => x.ProductId == productId);
+
+        // Phương thức chung để lấy inventory theo ProductId
+        private async Task<Inventory> GetInventoryByProductId(int productId) =>
+            await db.Inventories.FirstOrDefaultAsync(x => x.ProductId == productId);
+
+        // Phương thức chung để lấy category theo tên
+        private async Task<Category> GetCategoryByName(string categoryName) =>
+            await db.Categories.FirstOrDefaultAsync(x => x.CategoryName == categoryName);
+
+        // Phương thức kiểm tra dữ liệu đầu vào
+        private bool ValidateProductInput()
         {
-            var listProduct = db.Products.Select(x => new
+            if (string.IsNullOrEmpty(txtProductName.Text) || string.IsNullOrEmpty(txtQuantity.Text))
             {
-                ProductID = x.ProductId,
-                ProductName = x.ProductName,
-                Category = x.Category.CategoryName,
-                Price = x.Price,
-                Quantity = db.Inventories.Where(c => c.ProductId == x.ProductId).Select(c => c.Quantity).FirstOrDefault() != null ? db.Inventories.Where(c => c.ProductId == x.ProductId).Select(c => c.Quantity).FirstOrDefault() : 0,
-                Description = x.Description,
-            }).ToList();
+                MessageBox.Show("Please Enter Product Name and Quantity!");
+                return false;
+            }
+
+            if (!decimal.TryParse(txtPrice.Text, out _))
+            {
+                MessageBox.Show("Invalid Price!");
+                return false;
+            }
+            return true;
+        }
+
+        // Load sản phẩm
+        private void  LoadLvProduct()
+        {
+            var listProduct =  db.Products
+                .Select(x => new
+                {
+                    ProductID = x.ProductId,
+                    ProductName = x.ProductName,
+                    Category = x.Category.CategoryName,
+                    Price = x.Price,
+                    Quantity = db.Inventories.Where(c => c.ProductId == x.ProductId).Select(c => c.Quantity).FirstOrDefault() ?? 0,
+                    Description = x.Description,
+                }).ToList();
+
             lvProduct.ItemsSource = listProduct;
-
-            lvProduct.SelectedItem = null;
-            txtProductID.Text = "";
-            txtProductName.Text = "";
-            cbCategory.SelectedIndex = 0;
-            txtPrice.Text = "";
-            txtQuantity.Text = "";
-            txtDescription.Text = "";
-            txtImport.Text = "";
+            ResetProductForm();
         }
 
-        public void LoadLvCategory()
+        // Load danh mục sản phẩm
+        private void LoadLvCategory()
         {
-            var listCategory = db.Categories.Select(x => new
-            {
-                CategoryID = x.CategoryId,
-                CategoryName = x.CategoryName,
-            }).ToList();
+            var listCategory = db.Categories
+                .Select(x => new {
+                    CategoryID = x.CategoryId,
+                    CategoryName = x.CategoryName,
+                })
+                .ToList();
+
             lvCategory.ItemsSource = listCategory;
-
-            lvCategory.SelectedItem = null;
-            txtCategoryId.Text = "";
-            txtCategoryName.Text = "";
-           
+            ResetCategoryForm();
         }
 
-        public void LoadCbCategory()
+        // Load combobox danh mục
+        private void LoadCbCategory()
         {
-            var listCategory = db.Categories.Select(x => x.CategoryName).ToList();
+            var listCategory = db.Categories
+                .Select(x => x.CategoryName)
+                .ToList();
             cbCategory.ItemsSource = listCategory;
             cbCategory.SelectedIndex = 0;
         }
 
-        private void lvProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        // Reset form product
+        private void ResetProductForm()
         {
-            var selectedProduct = lvProduct.SelectedItem as dynamic;
-            if (selectedProduct != null)
-            {
-                txtProductID.Text = selectedProduct.ProductID.ToString();
-                txtProductName.Text = selectedProduct.ProductName;
-                cbCategory.Text = selectedProduct.Category;
-                txtPrice.Text = selectedProduct.Price.ToString();
-                txtQuantity.Text = selectedProduct.Quantity.ToString();
-                txtDescription.Text = selectedProduct.Description;
-            }
+            lvProduct.SelectedItem = null;
+            txtProductID.Clear();
+            txtProductName.Clear();
+            cbCategory.SelectedIndex = 0;
+            txtPrice.Clear();
+            txtQuantity.Clear();
+            txtDescription.Clear();
+            txtImport.Clear();
         }
 
-        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        // Reset form category
+        private void ResetCategoryForm()
         {
-            LoadLvProduct();
+            lvCategory.SelectedItem = null;
+            txtCategoryId.Clear();
+            txtCategoryName.Clear();
         }
 
-        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        // Thêm sản phẩm
+        private void AddProduct()
         {
-            if (String.IsNullOrEmpty(txtProductName.Text))
+            if (!ValidateProductInput()) return;
+
+            var category = db.Categories.FirstOrDefault(x => x.CategoryName == cbCategory.Text);
+            if (category == null)
             {
-                MessageBox.Show("Please Enter Product Name!");
+                MessageBox.Show("Category not found.");
                 return;
             }
 
-            decimal price;
-            try
-            {
-                price = decimal.Parse(txtPrice.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Invalid Price!");
-                return;
-            }
-            
-
-            if (String.IsNullOrEmpty(txtQuantity.Text))
-            {
-                MessageBox.Show("Please Enter Quantity!");
-                return;
-            }
-
-            Product product = new Product()
+            var product = new Product()
             {
                 ProductName = txtProductName.Text,
-                Category = db.Categories.FirstOrDefault(x => x.CategoryName == cbCategory.Text),
-                Price = price,
+                Category = category,
+                Price = decimal.Parse(txtPrice.Text),
                 Description = txtDescription.Text,
             };
-
 
             try
             {
                 db.Products.Add(product);
                 db.SaveChanges();
-                Inventory inven = new Inventory()
+
+                var inventory = new Inventory()
                 {
                     ProductId = product.ProductId,
                     Quantity = int.Parse(txtQuantity.Text),
                 };
-                db.Inventories.Add(inven);
+                db.Inventories.Add(inventory);
                 db.SaveChanges();
+
                 MessageBox.Show("Add Product Success!");
                 LoadLvProduct();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show($"Error adding product: {ex.Message}");
             }
-
         }
 
-        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        // Cập nhật sản phẩm
+        private async Task UpdateProduct()
         {
-            if (String.IsNullOrEmpty(txtProductID.Text))
+            if (string.IsNullOrEmpty(txtProductID.Text))
             {
                 MessageBox.Show("Not Found Product to Update!");
                 return;
             }
 
-            if (String.IsNullOrEmpty(txtProductName.Text))
+            var productId = int.Parse(txtProductID.Text);
+            var product = await GetProductById(productId);
+            if (product == null)
             {
-                MessageBox.Show("Please Enter Product Name!");
+                MessageBox.Show("Product not found.");
                 return;
             }
 
-            decimal price;
+            if (!ValidateProductInput()) return;
+
+            var category = await GetCategoryByName(cbCategory.Text);
+            if (category == null)
+            {
+                MessageBox.Show("Category not found.");
+                return;
+            }
+
+            product.ProductName = txtProductName.Text;
+            product.Category = category;
+            product.Price = decimal.Parse(txtPrice.Text);
+            product.Description = txtDescription.Text;
+
+            var inventory = await GetInventoryByProductId(productId);
+            if (inventory != null)
+            {
+                inventory.Quantity = int.Parse(txtQuantity.Text);
+            }
+
             try
             {
-                price = decimal.Parse(txtPrice.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Invalid Price!");
-                return;
-            }
-
-            if (String.IsNullOrEmpty(txtQuantity.Text))
-            {
-                MessageBox.Show("Please Enter Quantity!");
-                return;
-            }
-
-            Product selectedProduct = db.Products.FirstOrDefault(x => x.ProductId == int.Parse(txtProductID.Text));
-
-            if (selectedProduct == null)
-            {
-                MessageBox.Show($"Not Found ProductID = {txtProductID.Text}");
-                return;
-            }
-
-            selectedProduct.ProductName = txtProductName.Text;
-            selectedProduct.Category = db.Categories.FirstOrDefault(x => x.CategoryName == cbCategory.Text);
-            selectedProduct.Price = price;
-            selectedProduct.Description = txtDescription.Text;
-
-            Inventory inventory = db.Inventories.FirstOrDefault(x => x.ProductId == selectedProduct.ProductId);
-            inventory.Quantity = int.Parse(txtQuantity.Text);
-            try
-            {
-                db.Update(selectedProduct);
+                db.Update(product);
                 db.Update(inventory);
-                db.SaveChanges();
+                await db.SaveChangesAsync();
                 MessageBox.Show("Update Product Success!");
                 LoadLvProduct();
             }
-            catch (DbUpdateException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show($"Error Update: {ex.InnerException?.Message}");
+                MessageBox.Show($"Error updating product: {ex.Message}");
             }
-
-
-
         }
 
-        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        // Xóa sản phẩm
+        private async Task DeleteProduct()
         {
-
-            if (String.IsNullOrEmpty(txtProductID.Text))
+            if (string.IsNullOrEmpty(txtProductID.Text))
             {
                 MessageBox.Show("Not Found Product to Delete!");
                 return;
             }
 
-            Product product = db.Products.FirstOrDefault(x => x.ProductId == int.Parse(txtProductID.Text));
-            Inventory inventory = db.Inventories.FirstOrDefault(x => x.ProductId == product.ProductId);
-            if (product == null)
+            var productId = int.Parse(txtProductID.Text);
+            var product = await GetProductById(productId);
+            var inventory = await GetInventoryByProductId(productId);
+
+            if (product == null || inventory == null)
             {
-                MessageBox.Show("Not Found Product!");
+                MessageBox.Show("Product or Inventory not found.");
                 return;
             }
 
-            MessageBoxResult result = MessageBox.Show("Are you sure you want to delete?", "", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-
+            var result = MessageBox.Show("Are you sure you want to delete?", "", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if (result == MessageBoxResult.Yes)
             {
                 try
                 {
                     db.Remove(inventory);
                     db.Remove(product);
-                    db.SaveChanges();
+                    await db.SaveChangesAsync();
                     MessageBox.Show("Delete Success!");
                     LoadLvProduct();
-                    btnRefresh_Click(sender, e);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Error Delete: {ex.Message}");
+                    MessageBox.Show($"Error deleting product: {ex.Message}");
                 }
             }
         }
 
-        private void lvCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        // Nhập hàng (Import)
+        private async Task ImportProduct(int quantity)
         {
-            var selectedCategory = lvCategory.SelectedItem as dynamic;
-            if (selectedCategory != null)
-            {
-                txtCategoryId.Text = selectedCategory.CategoryID.ToString();
-                txtCategoryName.Text = selectedCategory.CategoryName;
-            }
-
-           
-        }
-
-        private void btnRefreshCategory_Click(object sender, RoutedEventArgs e)
-        {
-            LoadLvCategory();
-        }
-
-        private void btnAddCategory_Click(object sender, RoutedEventArgs e)
-        {
-            if (String.IsNullOrEmpty(txtCategoryName.Text))
-            {
-                MessageBox.Show("Please Enter Category Name!");
-                return;
-            }
-
-
-            Category category = new Category()
-            {
-                CategoryName = txtCategoryName.Text
-            };
-
-            try
-            {
-                db.Add(category);
-                db.SaveChanges();
-                MessageBox.Show("Add Category Success!");
-                LoadLvCategory();
-                LoadCbCategory();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error Add Category {ex.Message}");
-            }
-        }
-
-        private void btnUpdateCategory_Click(object sender, RoutedEventArgs e)
-        {
-            if (String.IsNullOrEmpty(txtCategoryId.Text))
-            {
-                MessageBox.Show("Not Found Category to Update!");
-                return;
-            }
-
-            if (String.IsNullOrEmpty(txtCategoryName.Text))
-            {
-                MessageBox.Show("Please Enter Category Name!");
-                return;
-            }
-
-            Category category = db.Categories.FirstOrDefault(x => x.CategoryId == int.Parse(txtCategoryId.Text));
-            if (category == null)
-            {
-                MessageBox.Show("Error Load Category");
-                return;
-            }
-
-            category.CategoryName = txtCategoryName.Text;
-
-            try
-            {
-                db.Update(category);
-                db.SaveChanges();
-                MessageBox.Show("Update Category Success!");
-                LoadLvCategory();
-                LoadCbCategory();
-                LoadLvProduct();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error Update Category {ex.Message}");
-            }
-        }
-
-        private void btnDeleteCategory_Click(object sender, RoutedEventArgs e)
-        {
-            if (String.IsNullOrEmpty(txtCategoryId.Text))
-            {
-                MessageBox.Show("Not Found Category to Delete!");
-                return;
-            }
-
-            Category category = db.Categories.FirstOrDefault(x => x.CategoryId == int.Parse(txtCategoryId.Text));
-            if (category == null)
-            {
-                MessageBox.Show("Error Load Category");
-                return;
-            }
-
-            try
-            {
-                db.Remove(category);
-                db.SaveChanges();
-                MessageBox.Show("Delete Category Success!");
-                LoadLvCategory();
-                LoadCbCategory();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error Delete Category {ex.Message}");
-            }
-        }
-
-        private void btnImport_Click(object sender, RoutedEventArgs e)
-        {
-            if (String.IsNullOrEmpty(txtImport.Text))
-            {
-                MessageBox.Show("Please Enter Import Value!");
-                return;
-            }
-
-            Product product;
-            try
-            {
-                product = db.Products.FirstOrDefault(x => x.ProductId == int.Parse(txtProductID.Text));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Not Found Product to Import!");
-                return;
-            }
-
-            Inventory inventory = db.Inventories.FirstOrDefault(x => x.ProductId == product.ProductId);
-            DateTime now = DateTime.Now;
-            inventory.LastUpdate = now;
-            try
-            {
-                inventory.Quantity += int.Parse(txtImport.Text);
-            }catch(Exception ex)
-            {
-                MessageBox.Show("Invalid Import Value!");
-                return;
-            }
-           
+            var product = await GetProductById(int.Parse(txtProductID.Text));
+            var inventory = await GetInventoryByProductId(product.ProductId);
+            inventory.LastUpdate = DateTime.Now;
+            inventory.Quantity += quantity;
 
             try
             {
                 db.Update(inventory);
-                db.SaveChanges();
-                MessageBox.Show($"Import {txtImport.Text} {product.ProductName} Success!");
+                await db.SaveChangesAsync();
+                MessageBox.Show($"Import {quantity} {product.ProductName} Success!");
                 LoadLvProduct();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error Import Product Quantity {ex.Message}");
             }
-            
+        }
 
+        private void btnImport_Click(object sender, RoutedEventArgs e)
+        {
+            if (int.TryParse(txtImport.Text, out var importValue))
+            {
+                ImportProduct(importValue);
+            }
+            else
+            {
+                MessageBox.Show("Invalid Import Value!");
+            }
         }
 
         private void btnExport_Click(object sender, RoutedEventArgs e)
         {
-            if (String.IsNullOrEmpty(txtImport.Text))
+            if (int.TryParse(txtImport.Text, out var exportValue))
             {
-                MessageBox.Show("Please Enter Import Value!");
-                return;
+                ImportProduct(-exportValue);
             }
-
-            Product product;
-            try
+            else
             {
-                product = db.Products.FirstOrDefault(x => x.ProductId == int.Parse(txtProductID.Text));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Not Found Product to Import!");
-                return;
-            }
-
-            Inventory inventory = db.Inventories.FirstOrDefault(x => x.ProductId == product.ProductId);
-            DateTime now = DateTime.Now;
-            inventory.LastUpdate = now;
-            try
-            {
-                inventory.Quantity -= int.Parse(txtImport.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Invalid Import Value!");
-                return;
-            }
-
-
-            try
-            {
-                db.Update(inventory);
-                db.SaveChanges();
-                MessageBox.Show($"Export {txtImport.Text} {product.ProductName} Success!");
-                LoadLvProduct();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error Export Product Quantity {ex.Message}");
+                MessageBox.Show("Invalid Export Value!");
             }
         }
+
+        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            LoadLvProduct();
+            ResetProductForm();
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            AddProduct();
+        }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            UpdateProduct();
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteProduct();
+        }
+
+        private void btnRefreshCategory_Click(object sender, RoutedEventArgs e)
+        {
+            ResetCategoryForm();
+        }
+
+        private void btnAddCategory_Click(object sender, RoutedEventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtCategoryName.Text))
+            {
+                MessageBox.Show("Category Name is Null");
+                return;
+            }
+
+            Category category = new Category()
+            {
+                CategoryName = txtCategoryName.Text,
+            }; 
+            db.Categories.Add(category);
+            db.SaveChanges();
+            MessageBox.Show($"Add {txtCategoryName.Text} Success!");
+            LoadLvCategory();
+            LoadCbCategory();
+        }
+
+        private void btnUpdateCategory_Click(object sender, RoutedEventArgs e)
+        {
+            if(String.IsNullOrEmpty(txtCategoryId.Text))
+            {
+                MessageBox.Show("Not found Category!");
+                return;
+            }
+
+            Category selectedCate = db.Categories.FirstOrDefault(x => x.CategoryId == int.Parse(txtCategoryId.Text));
+            selectedCate.CategoryName = txtCategoryName.Text;
+            db.Update(selectedCate);
+            db.SaveChanges();
+            MessageBox.Show($"Update Category Success!");
+            LoadLvCategory();
+            LoadCbCategory();
+        }
+
+        private void btnDeleteCategory_Click(object sender, RoutedEventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtCategoryId.Text))
+            {
+                MessageBox.Show("Not found Category!");
+                return;
+            }
+
+            Category selectedCate = db.Categories.FirstOrDefault(x => x.CategoryId == int.Parse(txtCategoryId.Text));
+            db.Remove(selectedCate);
+            db.SaveChanges();
+            MessageBox.Show($"Delete Category Success!");
+            LoadLvCategory();
+            LoadCbCategory();
+        }
+
+        private void lvCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var sltCate = lvCategory.SelectedItem as dynamic;
+            if (sltCate != null)
+            {
+                txtCategoryId.Text = sltCate.CategoryID.ToString();
+                txtCategoryName.Text = sltCate.CategoryName;
+            }
+        }
+
+        private void lvProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selected = lvProduct.SelectedItem as dynamic;
+            if (selected != null)
+            {
+                txtProductID.Text = selected.ProductID.ToString();
+                txtProductName.Text = selected.ProductName;
+                cbCategory.Text = selected.Category;
+                txtPrice.Text = selected.Price.ToString();
+                txtQuantity.Text = selected.Quantity.ToString();    
+                txtDescription.Text = selected.Description;
+            }
+
+        }
+
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            var lst = db.Products
+                .Where(x => x.ProductName.Contains(txtSearch.Text))
+                .Select(x => new
+                {
+                    ProductID = x.ProductId,
+                    ProductName = x.ProductName,
+                    Category = x.Category.CategoryName,
+                    Price = x.Price,
+                    Quantity = db.Inventories.Where(c => c.ProductId == x.ProductId).Select(c => c.Quantity).FirstOrDefault() ?? 0,
+                    Description = x.Description,
+                }).ToList();
+            lvProduct.ItemsSource = lst;
+        }
     }
+
 }

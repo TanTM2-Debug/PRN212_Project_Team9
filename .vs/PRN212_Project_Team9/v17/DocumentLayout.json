@@ -7,24 +7,28 @@
       "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\productmanage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\employees.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\employees.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\productmanage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\productmanage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\customerpoint.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\customerpoint.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\reportall\\reportcustomer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\reportall\\reportcustomer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\employees.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\employees.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\models\\salesmanagementdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\models\\salesmanagementdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\admin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\admin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|e:\\fall24\\project prn\\prn212_project_team9\\prn212_project_team9\\admin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F808D7BC-0C5B-41DC-B76A-65FF01BF28D4}|PRN212_Project_Team9\\PRN212_Project_Team9.csproj|solutionrelative:prn212_project_team9\\admin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,8 +38,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReportCustomer.xaml.cs",
+              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\ReportAll\\ReportCustomer.xaml.cs",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\ReportAll\\ReportCustomer.xaml.cs",
+              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\ReportAll\\ReportCustomer.xaml.cs",
+              "RelativeToolTip": "PRN212_Project_Team9\\ReportAll\\ReportCustomer.xaml.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAADgvxAAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T07:36:43.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SalesManagementDbContext.cs",
+              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\Models\\SalesManagementDbContext.cs",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\Models\\SalesManagementDbContext.cs",
+              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\Models\\SalesManagementDbContext.cs",
+              "RelativeToolTip": "PRN212_Project_Team9\\Models\\SalesManagementDbContext.cs",
+              "ViewState": "AQIAAC8BAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T07:20:14.526Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -44,67 +72,57 @@
               "RelativeDocumentMoniker": "PRN212_Project_Team9\\ProductManage.xaml.cs",
               "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\ProductManage.xaml.cs",
               "RelativeToolTip": "PRN212_Project_Team9\\ProductManage.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAqAAAA",
+              "ViewState": "AQIAALkAAAAAAAAAAAAUwJwBAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T16:55:11.374Z",
+              "WhenOpened": "2024-11-07T14:27:25.971Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CustomerPoint.xaml",
-              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\CustomerPoint.xaml",
-              "RelativeDocumentMoniker": "PRN212_Project_Team9\\CustomerPoint.xaml",
-              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\CustomerPoint.xaml",
-              "RelativeToolTip": "PRN212_Project_Team9\\CustomerPoint.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-06T05:43:17.322Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Employees.xaml.cs",
-              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\Employees.xaml.cs",
-              "RelativeDocumentMoniker": "PRN212_Project_Team9\\Employees.xaml.cs",
-              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\Employees.xaml.cs",
-              "RelativeToolTip": "PRN212_Project_Team9\\Employees.xaml.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAowGcAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T05:41:18.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Employees.xaml",
-              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\Employees.xaml",
-              "RelativeDocumentMoniker": "PRN212_Project_Team9\\Employees.xaml",
-              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\Employees.xaml",
-              "RelativeToolTip": "PRN212_Project_Team9\\Employees.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-06T05:41:15.851Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "PRN212_Project_Team9\\MainWindow.xaml.cs",
-              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml.cs",
-              "RelativeToolTip": "PRN212_Project_Team9\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAC0AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T03:49:23.427Z"
+              "Title": "App.xaml",
+              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\App.xaml",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\App.xaml",
+              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\App.xaml",
+              "RelativeToolTip": "PRN212_Project_Team9\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-07T14:24:45.244Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "PRN212_Project_Team9\\MainWindow.xaml",
-              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\MainWindow.xaml",
-              "RelativeToolTip": "PRN212_Project_Team9\\MainWindow.xaml",
+              "Title": "Admin.xaml.cs",
+              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\Admin.xaml.cs",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\Admin.xaml.cs",
+              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\Admin.xaml.cs",
+              "RelativeToolTip": "PRN212_Project_Team9\\Admin.xaml.cs",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAnwI0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T14:23:29.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductManage.xaml",
+              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\ProductManage.xaml",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\ProductManage.xaml",
+              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\ProductManage.xaml",
+              "RelativeToolTip": "PRN212_Project_Team9\\ProductManage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-06T03:49:12.065Z"
+              "WhenOpened": "2024-11-07T14:22:59.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Admin.xaml",
+              "DocumentMoniker": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\Admin.xaml",
+              "RelativeDocumentMoniker": "PRN212_Project_Team9\\Admin.xaml",
+              "ToolTip": "E:\\Fall24\\Project PRN\\PRN212_Project_Team9\\PRN212_Project_Team9\\Admin.xaml",
+              "RelativeToolTip": "PRN212_Project_Team9\\Admin.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-07T14:22:00.191Z"
             }
           ]
         }

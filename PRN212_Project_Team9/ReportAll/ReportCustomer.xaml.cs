@@ -15,7 +15,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using ClosedXML.Excel;
 using Microsoft.Win32;
 
 namespace PRN212_Project_Team9.Report
