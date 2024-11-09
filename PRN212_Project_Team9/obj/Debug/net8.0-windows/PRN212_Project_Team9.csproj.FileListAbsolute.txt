@@ -439,3 +439,11 @@ D:\PRN_project\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-window
 D:\PRN_project\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\PRN212_Project_Team9.pdb
 D:\PRN_project\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\PRN212_Project_Team9.genruntimeconfig.cache
 D:\PRN_project\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\ref\PRN212_Project_Team9.dll
+D:\PRN_project\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\Supplierforproduct.g.cs
+D:\PRN_project\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\Supplierforproduct.baml
+D:\PRN_project\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\SupplierProduct.g.cs
+D:\PRN_project\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\SupplierProduct.baml
+D:\PRN_project\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\Discounts.baml
+D:\PRN_project\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\ProductDiscounts.baml
+D:\PRN_project\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\Discounts.g.cs
+D:\PRN_project\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\ProductDiscounts.g.cs

@@ -13,10 +13,22 @@
     <Compile Update="Customer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Discounts.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Employees.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="OrderForCustomer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProductDiscounts.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Supplierforproduct.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SupplierProduct.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -27,6 +39,9 @@
     <Page Update="Customer.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Discounts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Employees.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -34,6 +49,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="OrderForCustomer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ProductDiscounts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Supplierforproduct.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SupplierProduct.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

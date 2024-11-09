@@ -8,5 +8,8 @@
         Title="Employees" Height="450" Width="800">
     <Grid>
         <Button x:Name="OrderForCustomerButton" Content="Order For Customer" HorizontalAlignment="Left" Margin="622,352,0,0" VerticalAlignment="Top" Height="45" Width="137" Click="OrderForCustomerButton_Click"/>
+        <Button Content="Supplier for product" HorizontalAlignment="Left" Margin="414,352,0,0" VerticalAlignment="Top" Click="Supplierforproduct_Click" Height="45" Width="150"/>
+        <Button Content="Discount for product" HorizontalAlignment="Left" Margin="234,352,0,0" VerticalAlignment="Top" Height="45" Width="129" Click="Discount_Click_1"/>
+
     </Grid>
 </Window>

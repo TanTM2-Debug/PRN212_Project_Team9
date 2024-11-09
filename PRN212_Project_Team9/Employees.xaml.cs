@@ -33,5 +33,22 @@ namespace PRN212_Project_Team9
             OrderForCustomer orderForCustomer = new OrderForCustomer();
             orderForCustomer.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Supplierforproduct_Click(object sender, RoutedEventArgs e)
+        {
+            Supplierforproduct supplierforproduct = new Supplierforproduct();
+            supplierforproduct.Show();
+        }
+
+        private void Discount_Click_1(object sender, RoutedEventArgs e)
+        {
+            Discounts discounts = new Discounts();
+            discounts.Show();
+        }
     }
 }

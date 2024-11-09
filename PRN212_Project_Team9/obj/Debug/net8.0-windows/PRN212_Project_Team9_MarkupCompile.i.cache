@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\PRN_project\PRN212_Project_Team9\PRN212_Project_Team9\App.xaml
-5395501204
+9140001463
 
-27464930344
+311492365699
 244-919019734
-Admin.xaml;Customer.xaml;Employees.xaml;MainWindow.xaml;OrderForCustomer.xaml;
+Admin.xaml;Customer.xaml;Discounts.xaml;Employees.xaml;MainWindow.xaml;OrderForCustomer.xaml;ProductDiscounts.xaml;Supplierforproduct.xaml;SupplierProduct.xaml;
 
 True
 
