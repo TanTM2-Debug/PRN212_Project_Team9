@@ -34,9 +34,10 @@
         <Button Content="Refresh" HorizontalAlignment="Left" Margin="10,334,0,0" VerticalAlignment="Top" Height="26" Width="276" Click="Button_Click_2"/>
 
 
-        <Button x:Name="AddOrderDetail" Content="AddOrderDetail" HorizontalAlignment="Left" Margin="333,457,0,0" VerticalAlignment="Top" Height="27" Width="262"/>
-        <Button x:Name="DeleteOrderDetail" Content="DeleteOrderDetail" HorizontalAlignment="Left" Margin="333,497,0,0" VerticalAlignment="Top" Height="27" Width="262"/>
-        <ComboBox Name="OrderSelected" Margin="10,421,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="29" Width="147" SelectionChanged="OrderSelected_SelectionChanged"/>
+        <Button x:Name="AddOrderDetail" Content="AddOrderDetail" HorizontalAlignment="Left" Margin="325,372,0,0" VerticalAlignment="Top" Height="27" Width="270" Click="AddOrderDetail_Click"/>
+        <Button x:Name="DeleteOrderDetail" Content="DeleteOrderDetail" HorizontalAlignment="Left" Margin="325,408,0,0" VerticalAlignment="Top" Height="28" Width="270" Click="DeleteOrderDetail_Click"/>
+        <ComboBox Name="OrderSelected" Margin="10,496,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="276" SelectionChanged="OrderSelected_SelectionChanged"/>
+
 
 
         <Label Content="ProductId" HorizontalAlignment="Left" Margin="329,221,0,0" VerticalAlignment="Top" Background="Aqua" Width="95"/>
@@ -47,9 +48,12 @@
         <TextBox x:Name="tbxNameProduct" HorizontalAlignment="Left" Margin="446,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
         <TextBox x:Name="tbxTotalPrice" HorizontalAlignment="Left" Margin="446,298,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
         <TextBox x:Name="tbxQuantityProduct" HorizontalAlignment="Left" Margin="446,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" Height="26" IsReadOnly="True"/>
-        <Label Content="Order" HorizontalAlignment="Left" Margin="10,390,0,0" VerticalAlignment="Top" Background="DarkGreen" Width="147"/>
+        <Label Content="Order" HorizontalAlignment="Left" Margin="10,390,0,0" VerticalAlignment="Top" Background="DarkGreen" Width="276"/>
+        <Button Content="OrderPayment" HorizontalAlignment="Left" Margin="325,453,0,0" VerticalAlignment="Top" Height="71" Width="270" FontSize="36" FontWeight="Bold" Click="Button_Click_3"/>
+        <Button Name="NewOrderToday" Content="NewOrder" HorizontalAlignment="Left" Margin="10,422,0,0" VerticalAlignment="Top" Height="69" Width="133" FontSize="18" FontWeight="Bold" Click="Button_Click_4"/>
+        <Button x:Name="DeteleOrderSelect" Content="DeteleOrder" HorizontalAlignment="Left" Margin="148,423,0,0" VerticalAlignment="Top" Height="68" Width="138" FontSize="18" FontWeight="Bold" Click="DeteleOrderSelect_Click" />
 
-
+        
 
     </Grid>
 </Window>

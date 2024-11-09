@@ -2,6 +2,7 @@
 using PRN212_Project_Team9.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace PRN212_Project_Team9
     /// </summary>
     public partial class OrderForCustomer : Window
     {
-
+        int? orderId = null;
 
         SalesManagementDbContext _con = new SalesManagementDbContext();
 
@@ -129,8 +130,6 @@ namespace PRN212_Project_Team9
                     OrderDetail.ItemsSource = _con.OrderDetails.Where(x => x.OrderId == myOrder.OrderId).ToList();
                 }
 
-
-                
             }
         }
 
@@ -138,13 +137,13 @@ namespace PRN212_Project_Team9
         private void ListCustomer_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             dynamic customerSelect = ListCustomer.SelectedItem as dynamic;
-            if (customerSelect != null)
+            if (customerSelect != null && orderId == null)
             {
                 tbxIdCustomer.Text = customerSelect.CustomerId.ToString();
                 tbxNameCustomer.Text = customerSelect.CustomerName;
                 tbxPhoneCustomer.Text = customerSelect.PhoneNumber;
 
-                List<DateTime?> TimeOrder = new List<DateTime?>() { DateTime.Now };
+                List<DateTime?> TimeOrder = new List<DateTime?>() { };
                 TimeOrder.AddRange(_con.Orders.Where(x => x.CustomerId == Int32.Parse(tbxIdCustomer.Text)).OrderByDescending(x => x.OrderDate).Select(x => x.OrderDate).ToList());
                 OrderSelected.ItemsSource = TimeOrder.ToList();
             }
@@ -152,7 +151,147 @@ namespace PRN212_Project_Team9
 
         private void OrderDetail_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            try
+            {
+                dynamic st = OrderDetail.SelectedItem;
+                tbxIdProduct.Text = st.ProductId.ToString();
+                Product? product = _con.Products.Find(st.ProductId);
+                tbxNameProduct.Text = product != null ? product.ProductName : "";
+                tbxTotalPrice.Text = st.TotalPrice.ToString();
+                tbxQuantityProduct.Text = st.Quantity.ToString();
+            } catch { MessageBox.Show("Không có giá trị để chọn"); }
+            
+        }
 
+        private void AddOrderDetail_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                DateTime? selectedDateTime = OrderSelected.Items[OrderSelected.SelectedIndex] as DateTime?;
+                DateTime dateTime = DateTime.Now;
+
+                if (selectedDateTime != null)
+                {
+                    Order? myOrder = _con.Orders.FirstOrDefault(x => x.OrderDate == selectedDateTime && x.CustomerId == Int32.Parse(tbxIdCustomer.Text));
+
+                    if (myOrder != null)
+                    {
+                        List<OrderDetail> dataOrderDetailList = _con.OrderDetails.Where(x => x.OrderId == myOrder.OrderId).ToList();
+
+                        if(dataOrderDetailList.Count > 0)
+                        {
+                            OrderDetail? orderDetail = dataOrderDetailList.FirstOrDefault(x => x.ProductId == Int32.Parse(tbxIdProduct.Text) && x.OrderId == myOrder.OrderId);
+                            if (orderDetail != null) 
+                            {
+                                orderDetail.Quantity = Int32.Parse(tbxQuantityProduct.Text);
+                                orderDetail.UnitPrice = _con.Products.Find(orderDetail.ProductId).Price;
+                                orderDetail.TotalPrice = Decimal.Parse(tbxTotalPrice.Text);
+                                _con.SaveChanges();
+                            }
+                            else
+                            {
+                                _con.OrderDetails.Add(new OrderDetail { OrderId = myOrder.OrderId, ProductId = Int32.Parse(tbxIdProduct.Text), Quantity = Int32.Parse(tbxQuantityProduct.Text), UnitPrice = _con.Products.Find(Int32.Parse(tbxIdProduct.Text)).Price, TotalPrice = Decimal.Parse(tbxTotalPrice.Text) });
+                                _con.SaveChanges();
+                            }
+                        }
+                        else
+                        {
+                            _con.OrderDetails.Add(new OrderDetail { OrderId = myOrder.OrderId, ProductId = Int32.Parse(tbxIdProduct.Text), Quantity = Int32.Parse(tbxQuantityProduct.Text), UnitPrice = _con.Products.Find(Int32.Parse(tbxIdProduct.Text)).Price, TotalPrice = Decimal.Parse(tbxTotalPrice.Text) });
+                            _con.SaveChanges();
+                        }
+                        OrderDetail.ItemsSource = _con.OrderDetails.Where(x => x.OrderId == myOrder.OrderId).ToList();
+                    }
+
+                }
+            } catch { MessageBox.Show("Chưa chọn Order"); }
+        }
+
+
+
+
+        private void DeleteOrderDetail_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                DateTime? selectedDateTime = OrderSelected.Items[OrderSelected.SelectedIndex] as DateTime?;
+                DateTime dateTime = DateTime.Now;
+
+                if (selectedDateTime != null)
+                {
+                    Order? myOrder = _con.Orders.FirstOrDefault(x => x.OrderDate == selectedDateTime && x.CustomerId == Int32.Parse(tbxIdCustomer.Text));
+
+                    if (myOrder != null)
+                    {
+                        List<OrderDetail> dataOrderDetailList = _con.OrderDetails.Where(x => x.OrderId == myOrder.OrderId).ToList();
+
+                        if (dataOrderDetailList.Count > 0)
+                        {
+                            OrderDetail? orderDetail = dataOrderDetailList.FirstOrDefault(x => x.ProductId == Int32.Parse(tbxIdProduct.Text) && x.OrderId == myOrder.OrderId);
+                            if (orderDetail != null)
+                            {
+                                _con.OrderDetails.Remove(orderDetail);
+                                _con.SaveChanges();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Không thể xóa");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không thể xóa");
+                        }
+                        OrderDetail.ItemsSource = _con.OrderDetails.Where(x => x.OrderId == myOrder.OrderId).ToList();
+                    }
+
+                }
+            }
+            catch { MessageBox.Show("Chưa chọn Order"); }
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            if (tbxIdCustomer.Text.Length != 0)
+            {
+                Order orderToday = new Order { CustomerId = Int32.Parse(tbxIdCustomer.Text) , EmployeeId = 2 /*AppMemory.Id*/ , OrderDate = DateTime.Now , TotalAmount = 0 };
+                _con.Orders.Add(orderToday);
+                _con.SaveChanges();
+                orderId = orderToday.OrderId;
+                OrderSelected.ItemsSource = orderToday.OrderDate.ToString();
+                OrderSelected.Text = orderToday.OrderDate.ToString();
+                //NewOrderToday.IsEnabled = false;
+                //OrderSelected.IsEnabled = false;
+            }
+        }
+
+        private void DeteleOrderSelect_Click(object sender, RoutedEventArgs e)
+        {
+            DateTime? selectedDateTime = OrderSelected.Items[OrderSelected.SelectedIndex] as DateTime?;
+
+            if (selectedDateTime != null)
+            {
+                Order? myOrder = _con.Orders.FirstOrDefault(x => x.OrderDate == selectedDateTime && x.CustomerId == Int32.Parse(tbxIdCustomer.Text));
+
+                if (myOrder != null)
+                {
+                    _con.RemoveRange(_con.OrderDetails.Where(x => x.OrderId == myOrder.OrderId));
+                    _con.Orders.Remove(myOrder);
+                    _con.SaveChanges();
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu để xóa");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn ngày Order");
+            }
         }
     }
 }
