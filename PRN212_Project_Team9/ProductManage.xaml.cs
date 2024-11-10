@@ -31,17 +31,17 @@ namespace PRN212_Project_Team9
             LoadLvCategory();
         }
 
-        // Phương thức chung để lấy product theo ID
-        private async Task<Product> GetProductById(int productId) =>
-            await db.Products.FirstOrDefaultAsync(x => x.ProductId == productId);
+        //// Phương thức chung để lấy product theo ID
+        //private async Task<Product> GetProductById(int productId) =>
+        //    await db.Products.FirstOrDefaultAsync(x => x.ProductId == productId);
 
-        // Phương thức chung để lấy inventory theo ProductId
-        private async Task<Inventory> GetInventoryByProductId(int productId) =>
-            await db.Inventories.FirstOrDefaultAsync(x => x.ProductId == productId);
+        //// Phương thức chung để lấy inventory theo ProductId
+        //private async Task<Inventory> GetInventoryByProductId(int productId) =>
+        //    await db.Inventories.FirstOrDefaultAsync(x => x.ProductId == productId);
 
-        // Phương thức chung để lấy category theo tên
-        private async Task<Category> GetCategoryByName(string categoryName) =>
-            await db.Categories.FirstOrDefaultAsync(x => x.CategoryName == categoryName);
+        //// Phương thức chung để lấy category theo tên
+        //private async Task<Category> GetCategoryByName(string categoryName) =>
+        //    await db.Categories.FirstOrDefaultAsync(x => x.CategoryName == categoryName);
 
         // Phương thức kiểm tra dữ liệu đầu vào
         private bool ValidateProductInput()
@@ -61,9 +61,9 @@ namespace PRN212_Project_Team9
         }
 
         // Load sản phẩm
-        private void  LoadLvProduct()
+        private void LoadLvProduct()
         {
-            var listProduct =  db.Products
+            var listProduct = db.Products
                 .Select(x => new
                 {
                     ProductID = x.ProductId,
@@ -82,7 +82,8 @@ namespace PRN212_Project_Team9
         private void LoadLvCategory()
         {
             var listCategory = db.Categories
-                .Select(x => new {
+                .Select(x => new
+                {
                     CategoryID = x.CategoryId,
                     CategoryName = x.CategoryName,
                 })
@@ -166,7 +167,7 @@ namespace PRN212_Project_Team9
         }
 
         // Cập nhật sản phẩm
-        private async Task UpdateProduct()
+        private void UpdateProduct()
         {
             if (string.IsNullOrEmpty(txtProductID.Text))
             {
@@ -175,7 +176,7 @@ namespace PRN212_Project_Team9
             }
 
             var productId = int.Parse(txtProductID.Text);
-            var product = await GetProductById(productId);
+            var product = db.Products.FirstOrDefault(x => x.ProductId == productId);
             if (product == null)
             {
                 MessageBox.Show("Product not found.");
@@ -184,7 +185,7 @@ namespace PRN212_Project_Team9
 
             if (!ValidateProductInput()) return;
 
-            var category = await GetCategoryByName(cbCategory.Text);
+            var category = db.Categories.FirstOrDefault(x => x.CategoryName == cbCategory.Text);
             if (category == null)
             {
                 MessageBox.Show("Category not found.");
@@ -196,17 +197,17 @@ namespace PRN212_Project_Team9
             product.Price = decimal.Parse(txtPrice.Text);
             product.Description = txtDescription.Text;
 
-            var inventory = await GetInventoryByProductId(productId);
+            var inventory = db.Inventories.FirstOrDefault(x => x.ProductId == productId);
             if (inventory != null)
             {
                 inventory.Quantity = int.Parse(txtQuantity.Text);
+                db.Update(inventory); // Chỉ gọi Update nếu inventory không null
             }
 
             try
             {
                 db.Update(product);
-                db.Update(inventory);
-                await db.SaveChangesAsync();
+                db.SaveChanges();
                 MessageBox.Show("Update Product Success!");
                 LoadLvProduct();
             }
@@ -216,8 +217,9 @@ namespace PRN212_Project_Team9
             }
         }
 
+
         // Xóa sản phẩm
-        private async Task DeleteProduct()
+        private void DeleteProduct()
         {
             if (string.IsNullOrEmpty(txtProductID.Text))
             {
@@ -226,8 +228,8 @@ namespace PRN212_Project_Team9
             }
 
             var productId = int.Parse(txtProductID.Text);
-            var product = await GetProductById(productId);
-            var inventory = await GetInventoryByProductId(productId);
+            var product = db.Products.FirstOrDefault(x => x.ProductId == productId);
+            var inventory = db.Inventories.FirstOrDefault(x => x.ProductId == productId);
 
             if (product == null || inventory == null)
             {
@@ -242,7 +244,7 @@ namespace PRN212_Project_Team9
                 {
                     db.Remove(inventory);
                     db.Remove(product);
-                    await db.SaveChangesAsync();
+                    db.SaveChanges();
                     MessageBox.Show("Delete Success!");
                     LoadLvProduct();
                 }
@@ -254,17 +256,33 @@ namespace PRN212_Project_Team9
         }
 
         // Nhập hàng (Import)
-        private async Task ImportProduct(int quantity)
+        private void ImportProduct(int quantity)
         {
-            var product = await GetProductById(int.Parse(txtProductID.Text));
-            var inventory = await GetInventoryByProductId(product.ProductId);
+            var productId = int.Parse(txtProductID.Text);
+            var product = db.Products.FirstOrDefault(x => x.ProductId == productId);
+            var inventory = db.Inventories.FirstOrDefault(x => x.ProductId == productId);
+
+            // Kiểm tra nếu product hoặc inventory không tồn tại
+            if (product == null)
+            {
+                MessageBox.Show("Product not found.");
+                return;
+            }
+
+            if (inventory == null)
+            {
+                MessageBox.Show("Inventory not found.");
+                return;
+            }
+
+            // Cập nhật thông tin inventory nếu tìm thấy
             inventory.LastUpdate = DateTime.Now;
             inventory.Quantity += quantity;
 
             try
             {
                 db.Update(inventory);
-                await db.SaveChangesAsync();
+                db.SaveChanges();
                 MessageBox.Show($"Import {quantity} {product.ProductName} Success!");
                 LoadLvProduct();
             }
@@ -273,6 +291,43 @@ namespace PRN212_Project_Team9
                 MessageBox.Show($"Error Import Product Quantity {ex.Message}");
             }
         }
+
+
+        private void ExportProduct(int quantity)
+        {
+            var productId = int.Parse(txtProductID.Text);
+            var product = db.Products.FirstOrDefault(x => x.ProductId == productId);
+            var inventory = db.Inventories.FirstOrDefault(x => x.ProductId == productId);
+
+            // Kiểm tra nếu product hoặc inventory không tìm thấy
+            if (product == null)
+            {
+                MessageBox.Show("Product not found.");
+                return;
+            }
+
+            if (inventory == null)
+            {
+                MessageBox.Show("Inventory not found.");
+                return;
+            }
+
+            inventory.LastUpdate = DateTime.Now;
+            inventory.Quantity -= quantity;
+
+            try
+            {
+                db.Update(inventory);
+                db.SaveChanges();
+                MessageBox.Show($"Export {quantity} {product.ProductName} Success!");
+                LoadLvProduct();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error Export Product Quantity {ex.Message}");
+            }
+        }
+
 
         private void btnImport_Click(object sender, RoutedEventArgs e)
         {
@@ -290,7 +345,7 @@ namespace PRN212_Project_Team9
         {
             if (int.TryParse(txtImport.Text, out var exportValue))
             {
-                ImportProduct(-exportValue);
+                ExportProduct(exportValue);
             }
             else
             {
@@ -335,7 +390,7 @@ namespace PRN212_Project_Team9
             Category category = new Category()
             {
                 CategoryName = txtCategoryName.Text,
-            }; 
+            };
             db.Categories.Add(category);
             db.SaveChanges();
             MessageBox.Show($"Add {txtCategoryName.Text} Success!");
@@ -345,36 +400,63 @@ namespace PRN212_Project_Team9
 
         private void btnUpdateCategory_Click(object sender, RoutedEventArgs e)
         {
-            if(String.IsNullOrEmpty(txtCategoryId.Text))
+            if (string.IsNullOrEmpty(txtCategoryId.Text))
             {
                 MessageBox.Show("Not found Category!");
                 return;
             }
 
-            Category selectedCate = db.Categories.FirstOrDefault(x => x.CategoryId == int.Parse(txtCategoryId.Text));
+            // Tìm kiếm Category và kiểm tra nếu tồn tại
+            var selectedCate = db.Categories.FirstOrDefault(x => x.CategoryId == int.Parse(txtCategoryId.Text));
+            if (selectedCate == null)
+            {
+                MessageBox.Show("Category not found.");
+                return;
+            }
+
+            // Cập nhật tên Category nếu tìm thấy
             selectedCate.CategoryName = txtCategoryName.Text;
             db.Update(selectedCate);
             db.SaveChanges();
-            MessageBox.Show($"Update Category Success!");
+            MessageBox.Show("Update Category Success!");
             LoadLvCategory();
             LoadCbCategory();
+            LoadLvProduct();
         }
+
 
         private void btnDeleteCategory_Click(object sender, RoutedEventArgs e)
         {
-            if (String.IsNullOrEmpty(txtCategoryId.Text))
+            if (string.IsNullOrEmpty(txtCategoryId.Text))
             {
                 MessageBox.Show("Not found Category!");
                 return;
             }
 
-            Category selectedCate = db.Categories.FirstOrDefault(x => x.CategoryId == int.Parse(txtCategoryId.Text));
+            // Lấy đối tượng Category và kiểm tra nếu tồn tại
+            var selectedCate = db.Categories.FirstOrDefault(x => x.CategoryId == int.Parse(txtCategoryId.Text));
+            if (selectedCate == null)
+            {
+                MessageBox.Show("Category not found.");
+                return;
+            }
+
+            // Kiểm tra nếu danh mục có sản phẩm liên kết
+            bool hasProducts = db.Products.Any(x => x.CategoryId == selectedCate.CategoryId);
+            if (hasProducts)
+            {
+                MessageBox.Show("Cannot delete category because it has associated products.");
+                return;
+            }
+
             db.Remove(selectedCate);
             db.SaveChanges();
-            MessageBox.Show($"Delete Category Success!");
+            MessageBox.Show("Delete Category Success!");
             LoadLvCategory();
             LoadCbCategory();
         }
+
+
 
         private void lvCategory_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -395,7 +477,7 @@ namespace PRN212_Project_Team9
                 txtProductName.Text = selected.ProductName;
                 cbCategory.Text = selected.Category;
                 txtPrice.Text = selected.Price.ToString();
-                txtQuantity.Text = selected.Quantity.ToString();    
+                txtQuantity.Text = selected.Quantity.ToString();
                 txtDescription.Text = selected.Description;
             }
 
@@ -416,6 +498,20 @@ namespace PRN212_Project_Team9
                     Description = x.Description,
                 }).ToList();
             lvProduct.ItemsSource = lst;
+        }
+
+        private void btnLogout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow logout = new MainWindow();
+            logout.Show();
+            this.Close();
+        }
+
+        private void btnBackToMenu_Click(object sender, RoutedEventArgs e)
+        {
+            Admin admin = new Admin();
+            admin.Show();
+            this.Close();
         }
     }
 
