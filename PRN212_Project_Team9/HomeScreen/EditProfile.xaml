@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PRN212_Project_Team9.HomeScreen"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="EditProfile" Height="400" Width="600">
+        Title="EditProfile" Height="4500" Width="600">
     <Grid Margin="10">
         <StackPanel>
             <TextBlock Text="Employee Name:" FontWeight="Bold"/>
