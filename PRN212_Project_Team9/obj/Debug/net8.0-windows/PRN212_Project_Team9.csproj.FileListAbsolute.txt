@@ -467,3 +467,15 @@ D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0
 D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\HomeScreen\EditProfile.baml
 D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\HomeScreen\ProfileEmployee.baml
 D:\ProjectPRN\DemoGit\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\HomeScreen\TaskEmployee.baml
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\Admin\Admin.g.cs
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\Admin\Customer.g.cs
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\Admin\CustomerPoint.g.cs
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\Admin\Employees.g.cs
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\Admin\LoyaltyPrograms.g.cs
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\ChartReport\CharCustomer.g.cs
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\ChartReport\ChartEmployee.g.cs
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\HomeScreen\EditProfile.g.cs
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\HomeScreen\ProfileEmployee.g.cs
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\HomeScreen\TaskEmployee.g.cs
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\ReportAll\ReportCustomer.g.cs
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\ReportAll\ReportEmployee.g.cs

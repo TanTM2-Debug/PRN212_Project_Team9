@@ -150,7 +150,7 @@ namespace PRN212_Project_Team9 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PRN212_Project_Team9;V1.0.0.0;component/admin/admin.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PRN212_Project_Team9;component/admin/admin.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Admin\Admin.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
