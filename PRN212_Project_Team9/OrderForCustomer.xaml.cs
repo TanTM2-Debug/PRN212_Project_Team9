@@ -145,7 +145,7 @@ namespace PRN212_Project_Team9
 
                 List<DateTime?> TimeOrder = new List<DateTime?>() { };
                 TimeOrder.AddRange(_con.Orders.Where(x => x.CustomerId == Int32.Parse(tbxIdCustomer.Text)).OrderByDescending(x => x.OrderDate).Select(x => x.OrderDate).ToList());
-                OrderSelected.ItemsSource = TimeOrder.ToList();
+                LoadDataOfOrder(); 
             }
         }
 
@@ -251,7 +251,39 @@ namespace PRN212_Project_Team9
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                DateTime? selectedDateTime = OrderSelected.Items[OrderSelected.SelectedIndex] as DateTime?;
+                DateTime dateTime = DateTime.Now;
 
+                if (selectedDateTime != null)
+                {
+                    Order? myOrder = _con.Orders.FirstOrDefault(x => x.OrderDate == selectedDateTime && x.CustomerId == Int32.Parse(tbxIdCustomer.Text));
+
+                    if (myOrder != null)
+                    {
+                        List<OrderDetail> dataOrderDetailList = _con.OrderDetails.Where(x => x.OrderId == myOrder.OrderId).ToList();
+
+                        if (dataOrderDetailList.Count > 0)
+                        {
+                            TotalOrderAmount.Text = dataOrderDetailList.Sum(x => x.TotalPrice).ToString();
+
+                            try
+                            {
+                                myOrder.TotalAmount = Decimal.Parse(TotalOrderAmount.Text);
+                            }
+                            catch { myOrder.TotalAmount = 0; }
+                        }
+                        else
+                        {
+                            TotalOrderAmount.Text = "0";
+                        }
+                        OrderDetail.ItemsSource = _con.OrderDetails.Where(x => x.OrderId == myOrder.OrderId).ToList();
+                    }
+
+                }
+            }
+            catch { MessageBox.Show("Chưa chọn Order"); }
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
@@ -262,12 +294,23 @@ namespace PRN212_Project_Team9
                 _con.Orders.Add(orderToday);
                 _con.SaveChanges();
                 orderId = orderToday.OrderId;
-                OrderSelected.ItemsSource = orderToday.OrderDate.ToString();
-                OrderSelected.Text = orderToday.OrderDate.ToString();
-                //NewOrderToday.IsEnabled = false;
-                //OrderSelected.IsEnabled = false;
+                LoadDataOfOrder();
+                OrderSelected.SelectedIndex = 0;
+
             }
         }
+
+        private void LoadDataOfOrder()
+        {
+            try
+            {
+                List<DateTime?> TimeOrder = new List<DateTime?>() { };
+                TimeOrder.AddRange(_con.Orders.Where(x => x.CustomerId == Int32.Parse(tbxIdCustomer.Text)).OrderByDescending(x => x.OrderDate).Select(x => x.OrderDate).ToList());
+                OrderSelected.ItemsSource = TimeOrder.ToList();
+            } catch { MessageBox.Show("Chưa chọn khách hàng"); };
+
+        }
+
 
         private void DeteleOrderSelect_Click(object sender, RoutedEventArgs e)
         {

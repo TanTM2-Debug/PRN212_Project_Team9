@@ -193,29 +193,21 @@ namespace PRN212_Project_Team9
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
-
-            //OrderForCustomer orderForCustomer = new OrderForCustomer(Int32.Parse(tbxIdProduct.Text), tbxNameProduct.Text , decimal.Parse(tbxTotalPrice.Text), QuantityProduct.Value ?? 0);
-
-            //    public int IdProduct { get; set; }
-
-            //public string NameProduct { get; set; }
-
-            //public decimal TotalPrice { get; set; }
-
-            //public int QuantityProduct { get; set; }
-
             OrderForCustomer orderForCustomer = new OrderForCustomer();
             AppMemory.IdProduct = Int32.Parse(tbxIdProduct.Text);
             AppMemory.NameProduct = tbxNameProduct.Text;
             AppMemory.TotalPrice = decimal.Parse(tbxTotalPrice.Text);
             AppMemory.QuantityProduct = (QuantityProduct.Value ?? 0);
 
-
-            string selectedProductData = "Dữ liệu sản phẩm đã chọn";
-            ProductSelected?.Invoke(selectedProductData);
-
-            //orderForCustomer.Show();
-            this.Close(); 
+            if (AppMemory.QuantityProduct <= 0)
+            {
+                System.Windows.MessageBox.Show("Ko Thể không lấy sản phẩm");
+            }else if (AppMemory.QuantityProduct > 0)
+            {
+                string selectedProductData = "Dữ liệu sản phẩm đã chọn";
+                ProductSelected?.Invoke(selectedProductData);
+                this.Close();
+            }
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
