@@ -25,6 +25,12 @@ namespace PRN212_Project_Team9
         public MainWindow()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -34,21 +40,18 @@ namespace PRN212_Project_Team9
 
             if (data != null && data.PositionId == 1)
             {
-                MessageBox.Show("Login successful, Admin!");
                 Admin adminWindow = new Admin();
                 adminWindow.Show();
-                this.Close();
             }
             else if (data != null && data.PositionId == 2)
             {
-                MessageBox.Show("Login successful, Employee!");
-                Employees employeeWindow = new Employees(); // Sửa thành login truyền vào cửa sổ Order
+                AppMemory.Id = data.EmployeeId;
+                Employees employeeWindow = new Employees();
                 employeeWindow.Show();
-                this.Close();
             }
             else
             {
-                MessageBox.Show("Invalid email or password");
+                MessageBox.Show("Ko có tài khoản");
             }
 
         }
