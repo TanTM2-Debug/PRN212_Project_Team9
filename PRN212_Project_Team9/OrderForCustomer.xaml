@@ -13,7 +13,7 @@
                     <GridViewColumn Header="Id" Width="50" DisplayMemberBinding="{Binding Path=CustomerId}"/>
                     <GridViewColumn Header="Name" Width="100" DisplayMemberBinding="{Binding Path=CustomerName}"/>
                     <GridViewColumn Header="Phone" Width="100" DisplayMemberBinding="{Binding Path=PhoneNumber}"/>
-                </GridView>
+                </GridView>s
             </ListView.View>
         </ListView>
         <Label Background="BlueViolet" Content="ListCustomerInSystem" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="36" Width="276" FontSize="18" FontWeight="Bold"/>

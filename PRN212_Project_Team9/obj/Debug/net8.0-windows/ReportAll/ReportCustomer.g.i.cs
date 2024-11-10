@@ -9,7 +9,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using PRN212_Project_Team9;
 using PRN212_Project_Team9.Report;
 using System;
 using System.Diagnostics;

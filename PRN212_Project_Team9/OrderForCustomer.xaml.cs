@@ -290,7 +290,7 @@ namespace PRN212_Project_Team9
         {
             if (tbxIdCustomer.Text.Length != 0)
             {
-                Order orderToday = new Order { CustomerId = Int32.Parse(tbxIdCustomer.Text) , EmployeeId = 2 /*AppMemory.Id*/ , OrderDate = DateTime.Now , TotalAmount = 0 };
+                Order orderToday = new Order { CustomerId = Int32.Parse(tbxIdCustomer.Text) , EmployeeId = AppMemory.Id , OrderDate = DateTime.Now , TotalAmount = 0 };
                 _con.Orders.Add(orderToday);
                 _con.SaveChanges();
                 orderId = orderToday.OrderId;
