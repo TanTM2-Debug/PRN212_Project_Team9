@@ -51,5 +51,27 @@ namespace PRN212_Project_Team9
             profileEmployee.Show();
             this.Close();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Supplier_Click(object sender, RoutedEventArgs e)
+        {
+            Supplierforproduct supplierforproduct = new Supplierforproduct();
+            supplierforproduct.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Discount_Click_1(object sender, RoutedEventArgs e)
+        {
+            Discounts discounts = new Discounts();
+            discounts.Show();
+        }
     }
 }
