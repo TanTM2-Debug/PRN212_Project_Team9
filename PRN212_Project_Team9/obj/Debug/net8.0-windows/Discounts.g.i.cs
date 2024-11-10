@@ -164,7 +164,7 @@ namespace PRN212_Project_Team9 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PRN212_Project_Team9;component/discounts.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PRN212_Project_Team9;V1.0.0.0;component/discounts.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Discounts.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
