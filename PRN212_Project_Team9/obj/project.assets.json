@@ -4836,19 +4836,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\admin\\.nuget\\packages\\": {}
+    "C:\\Users\\msi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
+      "projectUniqueName": "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
       "projectName": "PRN212_Project_Team9",
-      "projectPath": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
-      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "D:\\ProjectPRN\\DemoGit\\PRN212_Project_Team9\\PRN212_Project_Team9\\obj\\",
+      "projectPath": "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\PRN212_Project_Team9.csproj",
+      "packagesPath": "C:\\Users\\msi\\.nuget\\packages\\",
+      "outputPath": "D:\\PRN212_Project_Team9_GitDesktop\\PRN212_Project_Team9\\PRN212_Project_Team9\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\msi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4926,7 +4926,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
