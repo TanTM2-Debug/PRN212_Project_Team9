@@ -336,5 +336,10 @@ namespace PRN212_Project_Team9
                 MessageBox.Show("Chưa chọn ngày Order");
             }
         }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
