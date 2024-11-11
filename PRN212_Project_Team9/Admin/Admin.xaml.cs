@@ -103,7 +103,6 @@ namespace PRN212_Project_Team9
                 })
                 .ToList();
 
-            // Tạo một LineSeries để biểu diễn dữ liệu thay cho BarSeries
             var lineSeries = new LineSeries
             {
                 Title = "Revenue",
