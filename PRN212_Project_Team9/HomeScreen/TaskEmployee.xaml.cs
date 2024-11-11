@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PRN212_Project_Team9.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,6 @@ namespace PRN212_Project_Team9
         {
             OrderForCustomer orderForCustomer = new OrderForCustomer();
             orderForCustomer.Show();
-            this.Close();
         }
 
         private void btnCustomer_Click(object sender, RoutedEventArgs e)
@@ -52,10 +52,6 @@ namespace PRN212_Project_Team9
             this.Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void Supplier_Click(object sender, RoutedEventArgs e)
         {
@@ -63,15 +59,22 @@ namespace PRN212_Project_Team9
             supplierforproduct.Show();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void Discount_Click_1(object sender, RoutedEventArgs e)
         {
             Discounts discounts = new Discounts();
             discounts.Show();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            ProductManage productManage = new ProductManage();
+            productManage.Show();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("HelloSlyly");
         }
     }
 }

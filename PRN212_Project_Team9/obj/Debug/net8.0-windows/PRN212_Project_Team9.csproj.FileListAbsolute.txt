@@ -727,3 +727,5 @@ D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj
 D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\SupplierProduct.g.cs
 D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\Supplierforproduct.baml
 D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\SupplierProduct.baml
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\ProductManage.g.cs
+D:\PRN212_Project_Team9_GitDesktop\PRN212_Project_Team9\PRN212_Project_Team9\obj\Debug\net8.0-windows\ProductManage.baml

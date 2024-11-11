@@ -509,8 +509,6 @@ namespace PRN212_Project_Team9
 
         private void btnBackToMenu_Click(object sender, RoutedEventArgs e)
         {
-            Admin admin = new Admin();
-            admin.Show();
             this.Close();
         }
     }

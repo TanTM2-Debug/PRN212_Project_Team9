@@ -56,11 +56,11 @@
                     </StackPanel>
 
                     <StackPanel Grid.Row="1" Grid.Column="1" Margin="10">
-                        <Button  Content="Order" BorderBrush="#FFD2A2A2" Background="#FFBCB9B1" FontSize="36" Height="225" FontWeight="Bold" FontFamily="Bell MT"/>
+                        <Button  Content="Order" BorderBrush="#FFD2A2A2" Background="#FFBCB9B1" FontSize="36" Height="225" FontWeight="Bold" FontFamily="Bell MT" Click="Button_Click_3"/>
                     </StackPanel>
 
                     <StackPanel Grid.Row="1" Grid.Column="2" Margin="10">
-                        <Button  Content="Order" BorderBrush="#FFD2A2A2" Background="#FFBCB9B1" FontSize="36" Height="225" FontWeight="Bold" FontFamily="Bell MT"/>
+                        <Button  Content="ProductMa" BorderBrush="#FFD2A2A2" Background="#FFBCB9B1" FontSize="36" Height="225" FontWeight="Bold" FontFamily="Bell MT" Click="Button_Click_2"/>
                     </StackPanel>
                 </Grid>
             </Grid>
