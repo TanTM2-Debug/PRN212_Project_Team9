@@ -323,6 +323,7 @@ namespace PRN212_Project_Team9
                 if (myOrder != null)
                 {
                     _con.RemoveRange(_con.OrderDetails.Where(x => x.OrderId == myOrder.OrderId));
+                    _con.SaveChanges();
                     _con.Orders.Remove(myOrder);
                     _con.SaveChanges();
                 }
