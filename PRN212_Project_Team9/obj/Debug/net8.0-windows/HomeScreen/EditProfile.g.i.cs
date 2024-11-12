@@ -109,7 +109,7 @@ namespace PRN212_Project_Team9.HomeScreen {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PRN212_Project_Team9;V1.0.0.0;component/homescreen/editprofile.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PRN212_Project_Team9;component/homescreen/editprofile.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\HomeScreen\EditProfile.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

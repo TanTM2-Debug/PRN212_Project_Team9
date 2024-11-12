@@ -62,7 +62,7 @@ namespace PRN212_Project_Team9.ChartReport {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/PRN212_Project_Team9;V1.0.0.0;component/chartreport/charcustomer.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/PRN212_Project_Team9;component/chartreport/charcustomer.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\ChartReport\CharCustomer.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
